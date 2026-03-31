@@ -2,7 +2,7 @@
 ==============================================================
  IPL SPORTS ANALYTICS PROJECT
  File: src/01_data_cleaning.py
- Author: Anju
+ Author: Anju saini
  Description: Load raw data, inspect, clean, and save
               clean versions ready for EDA and modelling.
 ==============================================================
