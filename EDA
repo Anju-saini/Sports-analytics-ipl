@@ -1,1 +1,127 @@
+"""
+==============================================================
+ IPL SPORTS ANALYTICS PROJECT
+ File: src/02_eda.py
+ Author: Anju
+ Description: Exploratory Data Analysis — summary statistics,
+              distributions, team & player insights.
+==============================================================
+"""
+
+import pandas as pd
+import numpy as np
+import os
+
+DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
+
+def load():
+    matches    = pd.read_csv(os.path.join(DATA_DIR, "matches_clean.csv"))
+    deliveries = pd.read_csv(os.path.join(DATA_DIR, "deliveries_clean.csv"))
+    return matches, deliveries
+
+
+def eda_matches(matches: pd.DataFrame):
+    print("\n" + "="*55)
+    print(" MATCHES EDA")
+    print("="*55)
+
+    # ── 1. Seasons & match counts ─────────────────────────────
+    print("\n📅 Matches per Season:")
+    print(matches.groupby("season")["match_id"].count().to_string())
+
+    # ── 2. Win method distribution ────────────────────────────
+    print("\n🏆 Win Method Distribution:")
+    print(matches["result"].value_counts().to_string())
+
+    # ── 3. Toss decision distribution ────────────────────────
+    print("\n🪙 Toss Decision Distribution:")
+    print(matches["toss_decision"].value_counts().to_string())
+
+    # ── 4. Toss winner = match winner? ───────────────────────
+    toss_win_pct = matches["toss_win_match_win"].mean() * 100
+    print(f"\n🎯 Toss winner went on to win the match: {toss_win_pct:.1f}% of the time")
+
+    # ── 5. Top teams by wins ──────────────────────────────────
+    print("\n🥇 Top Teams by Total Wins:")
+    team_wins = matches["winner"].value_counts()
+    print(team_wins.to_string())
+
+    # ── 6. Player of match leaders ───────────────────────────
+    print("\n⭐ Player of Match Award Leaders (Top 10):")
+    pom = (matches[matches["player_of_match"] != "Not Awarded"]
+           ["player_of_match"].value_counts().head(10))
+    print(pom.to_string())
+
+    # ── 7. Biggest wins by runs ───────────────────────────────
+    print("\n💥 Top 5 Biggest Wins by Runs:")
+    top_runs = (matches[matches["win_by_runs"] > 0]
+                .nlargest(5, "win_by_runs")
+                [["season","winner","win_by_runs"]])
+    print(top_runs.to_string(index=False))
+
+    return team_wins, toss_win_pct, pom
+
+
+def eda_deliveries(matches: pd.DataFrame, deliveries: pd.DataFrame):
+    print("\n" + "="*55)
+    print(" DELIVERIES EDA")
+    print("="*55)
+
+    # Merge to get season info
+    del_m = deliveries.merge(
+        matches[["match_id", "season"]], on="match_id", how="left"
+    )
+
+    # ── 1. Overall run distribution ───────────────────────────
+    print("\n📊 Batsman Run Distribution (per ball):")
+    print(deliveries["batsman_runs"].value_counts().sort_index().to_string())
+
+    # ── 2. Average runs per over by phase ─────────────────────
+    print("\n📈 Average Runs per Over by Phase:")
+    phase_avg = (deliveries.groupby("phase")["total_runs"]
+                 .mean().rename("avg_runs_per_ball"))
+    phase_avg = phase_avg * 6   # per over
+    print(phase_avg.round(2).to_string())
+
+    # ── 3. Top run scorers ────────────────────────────────────
+    print("\n🏏 Top 10 Run Scorers:")
+    top_bat = (deliveries.groupby("batsman")["batsman_runs"]
+               .sum().nlargest(10))
+    print(top_bat.to_string())
+
+    # ── 4. Top wicket takers ──────────────────────────────────
+    print("\n🎳 Top 10 Wicket Takers:")
+    top_bowl = (deliveries[deliveries["is_wicket"] == 1]
+                .groupby("bowler")["is_wicket"]
+                .sum().nlargest(10))
+    print(top_bowl.to_string())
+
+    # ── 5. Economy rate (min 50 overs bowled) ─────────────────
+    print("\n💰 Best Economy Rate (min 300 balls bowled):")
+    balls_bowled = deliveries.groupby("bowler")["ball"].count()
+    runs_given   = deliveries.groupby("bowler")["total_runs"].sum()
+    economy      = (runs_given / (balls_bowled / 6)).round(2)
+    qual_bowlers = balls_bowled[balls_bowled >= 300].index
+    print(economy.loc[qual_bowlers].nsmallest(10).to_string())
+
+    # ── 6. Strike rate leaders ────────────────────────────────
+    print("\n⚡ Best Strike Rate (min 200 balls faced):")
+    balls_faced = deliveries.groupby("batsman")["ball"].count()
+    runs_scored = deliveries.groupby("batsman")["batsman_runs"].sum()
+    sr          = ((runs_scored / balls_faced) * 100).round(2)
+    qual_bat    = balls_faced[balls_faced >= 200].index
+    print(sr.loc[qual_bat].nlargest(10).to_string())
+
+    return top_bat, top_bowl
+
+
+def main():
+    matches, deliveries = load()
+    eda_matches(matches)
+    eda_deliveries(matches, deliveries)
+    print("\n✅ EDA complete.")
+
+
+if __name__ == "__main__":
+    main()
 
