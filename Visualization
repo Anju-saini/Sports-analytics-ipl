@@ -1,1 +1,283 @@
+"""
+==============================================================
+ IPL SPORTS ANALYTICS PROJECT
+ File: src/03_visualizations.py
+ Author: [Your Name]
+ Description: Generate & save all analysis charts.
+              Run this script to reproduce every figure.
+==============================================================
+"""
+
+import pandas as pd
+import numpy as np
+import matplotlib
+matplotlib.use("Agg")          # headless backend — no display needed
+import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
+import seaborn as sns
+import os
+
+# ── Style ──────────────────────────────────────────────────────────────────────
+sns.set_theme(style="darkgrid", palette="deep")
+PALETTE   = "viridis"
+FIG_DIR   = os.path.join(os.path.dirname(__file__), "..", "visualizations")
+DATA_DIR  = os.path.join(os.path.dirname(__file__), "..", "data")
+os.makedirs(FIG_DIR, exist_ok=True)
+
+COLORS = {
+    "Mumbai Indians"              : "#004BA0",
+    "Chennai Super Kings"         : "#F9CD05",
+    "Royal Challengers Bangalore" : "#EC1C24",
+    "Kolkata Knight Riders"       : "#3A225D",
+    "Delhi Capitals"              : "#0078BC",
+    "Sunrisers Hyderabad"         : "#F7A721",
+    "Rajasthan Royals"            : "#EA1A8E",
+    "Punjab Kings"                : "#D71920",
+}
+
+def load():
+    m = pd.read_csv(os.path.join(DATA_DIR, "matches_clean.csv"))
+    d = pd.read_csv(os.path.join(DATA_DIR, "deliveries_clean.csv"))
+    return m, d
+
+def save(fig, name: str):
+    path = os.path.join(FIG_DIR, name)
+    fig.savefig(path, dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    print(f"  💾 Saved → {path}")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# CHART 1 – Total wins per team (horizontal bar)
+# ══════════════════════════════════════════════════════════════════════════════
+def chart_team_wins(matches):
+    wins = matches["winner"].value_counts().reset_index()
+    wins.columns = ["team", "wins"]
+    wins = wins.sort_values("wins")
+
+    fig, ax = plt.subplots(figsize=(10, 6))
+    bars = ax.barh(wins["team"], wins["wins"],
+                   color=[COLORS.get(t, "#888") for t in wins["team"]], edgecolor="white")
+    for bar, val in zip(bars, wins["wins"]):
+        ax.text(bar.get_width() + 0.5, bar.get_y() + bar.get_height()/2,
+                str(val), va="center", fontsize=11, fontweight="bold")
+
+    ax.set_title("🏆 Total IPL Wins by Team", fontsize=16, fontweight="bold", pad=14)
+    ax.set_xlabel("Number of Wins", fontsize=12)
+    ax.set_xlim(0, wins["wins"].max() + 15)
+    ax.spines[["top", "right"]].set_visible(False)
+    fig.tight_layout()
+    save(fig, "01_team_wins.png")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# CHART 2 – Matches per season (line + scatter)
+# ══════════════════════════════════════════════════════════════════════════════
+def chart_matches_per_season(matches):
+    per_season = matches.groupby("season")["match_id"].count().reset_index()
+    per_season.columns = ["season", "matches"]
+
+    fig, ax = plt.subplots(figsize=(10, 5))
+    ax.plot(per_season["season"], per_season["matches"],
+            marker="o", linewidth=2.5, markersize=8, color="#1f77b4")
+    ax.fill_between(per_season["season"], per_season["matches"], alpha=0.15, color="#1f77b4")
+    for _, row in per_season.iterrows():
+        ax.annotate(str(row["matches"]),
+                    (row["season"], row["matches"]),
+                    textcoords="offset points", xytext=(0, 8),
+                    ha="center", fontsize=9)
+
+    ax.set_title("📅 IPL Matches Played per Season", fontsize=16, fontweight="bold", pad=14)
+    ax.set_xlabel("Season", fontsize=12)
+    ax.set_ylabel("Number of Matches", fontsize=12)
+    ax.set_xticks(per_season["season"])
+    ax.spines[["top", "right"]].set_visible(False)
+    fig.tight_layout()
+    save(fig, "02_matches_per_season.png")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# CHART 3 – Toss decision vs match outcome (grouped bar)
+# ══════════════════════════════════════════════════════════════════════════════
+def chart_toss_decision(matches):
+    ct = (matches.groupby(["toss_decision", "toss_win_match_win"])
+          .size().unstack(fill_value=0)
+          .rename(columns={False: "Lost", True: "Won"}))
+
+    fig, ax = plt.subplots(figsize=(8, 5))
+    ct.plot(kind="bar", ax=ax, color=["#d62728", "#2ca02c"], edgecolor="white",
+            width=0.55, rot=0)
+
+    ax.set_title("🪙 Toss Decision vs Match Outcome", fontsize=15, fontweight="bold", pad=12)
+    ax.set_xlabel("Toss Decision", fontsize=12)
+    ax.set_ylabel("Number of Matches", fontsize=12)
+    ax.legend(title="Match Result", fontsize=11)
+    ax.spines[["top", "right"]].set_visible(False)
+    fig.tight_layout()
+    save(fig, "03_toss_vs_outcome.png")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# CHART 4 – Top 10 run scorers (bar chart)
+# ══════════════════════════════════════════════════════════════════════════════
+def chart_top_scorers(deliveries):
+    top = (deliveries.groupby("batsman")["batsman_runs"]
+           .sum().nlargest(10).reset_index())
+    top.columns = ["player", "runs"]
+
+    fig, ax = plt.subplots(figsize=(10, 6))
+    palette = sns.color_palette("magma", len(top))[::-1]
+    bars = ax.bar(top["player"], top["runs"], color=palette, edgecolor="white")
+    for bar, val in zip(bars, top["runs"]):
+        ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 40,
+                f"{val:,}", ha="center", fontsize=9.5, fontweight="bold")
+
+    ax.set_title("🏏 Top 10 Run Scorers (All Seasons)", fontsize=15, fontweight="bold", pad=12)
+    ax.set_ylabel("Total Runs", fontsize=12)
+    ax.set_xlabel("")
+    plt.xticks(rotation=35, ha="right", fontsize=10)
+    ax.spines[["top", "right"]].set_visible(False)
+    fig.tight_layout()
+    save(fig, "04_top_scorers.png")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# CHART 5 – Top 10 wicket takers
+# ══════════════════════════════════════════════════════════════════════════════
+def chart_top_wicket_takers(deliveries):
+    top = (deliveries[deliveries["is_wicket"] == 1]
+           .groupby("bowler")["is_wicket"]
+           .sum().nlargest(10).reset_index())
+    top.columns = ["bowler", "wickets"]
+
+    fig, ax = plt.subplots(figsize=(10, 6))
+    palette = sns.color_palette("rocket", len(top))[::-1]
+    bars = ax.bar(top["bowler"], top["wickets"], color=palette, edgecolor="white")
+    for bar, val in zip(bars, top["wickets"]):
+        ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.4,
+                str(val), ha="center", fontsize=10, fontweight="bold")
+
+    ax.set_title("🎳 Top 10 Wicket Takers (All Seasons)", fontsize=15, fontweight="bold", pad=12)
+    ax.set_ylabel("Total Wickets", fontsize=12)
+    plt.xticks(rotation=35, ha="right", fontsize=10)
+    ax.spines[["top", "right"]].set_visible(False)
+    fig.tight_layout()
+    save(fig, "05_top_wicket_takers.png")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# CHART 6 – Average runs per over by match phase (horizontal bars)
+# ══════════════════════════════════════════════════════════════════════════════
+def chart_runs_by_phase(deliveries):
+    phase_order = ["Powerplay", "Middle", "Death"]
+    phase_avg = (deliveries.groupby("phase")["total_runs"]
+                 .mean() * 6).reindex(phase_order).reset_index()
+    phase_avg.columns = ["phase", "avg_runs"]
+
+    fig, ax = plt.subplots(figsize=(8, 4))
+    colors = ["#2ecc71", "#f39c12", "#e74c3c"]
+    bars = ax.barh(phase_avg["phase"], phase_avg["avg_runs"],
+                   color=colors, edgecolor="white", height=0.5)
+    for bar, val in zip(bars, phase_avg["avg_runs"]):
+        ax.text(bar.get_width() + 0.05, bar.get_y() + bar.get_height()/2,
+                f"{val:.2f}", va="center", fontsize=12, fontweight="bold")
+
+    ax.set_title("📈 Average Runs per Over by Match Phase", fontsize=14, fontweight="bold", pad=12)
+    ax.set_xlabel("Avg Runs / Over", fontsize=11)
+    ax.set_xlim(0, phase_avg["avg_runs"].max() + 1.5)
+    ax.spines[["top", "right"]].set_visible(False)
+    fig.tight_layout()
+    save(fig, "06_runs_by_phase.png")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# CHART 7 – Run distribution heatmap (over × run type)
+# ══════════════════════════════════════════════════════════════════════════════
+def chart_over_run_heatmap(deliveries):
+    pivot = (deliveries.groupby(["over", "batsman_runs"])["ball"]
+             .count().unstack(fill_value=0))
+    # Keep only common run values
+    pivot = pivot[[c for c in [0,1,2,3,4,6] if c in pivot.columns]]
+
+    fig, ax = plt.subplots(figsize=(12, 7))
+    sns.heatmap(pivot, cmap="YlOrRd", linewidths=0.3, linecolor="white",
+                ax=ax, fmt="d", annot=True, annot_kws={"size": 7})
+    ax.set_title("🔥 Ball-by-Ball Run Distribution across Overs", fontsize=14,
+                 fontweight="bold", pad=12)
+    ax.set_xlabel("Runs Scored (per ball)", fontsize=11)
+    ax.set_ylabel("Over Number", fontsize=11)
+    fig.tight_layout()
+    save(fig, "07_over_run_heatmap.png")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# CHART 8 – Correlation heatmap (match-level features)
+# ══════════════════════════════════════════════════════════════════════════════
+def chart_correlation(matches):
+    cols = ["win_by_runs", "win_by_wickets", "toss_win_match_win"]
+    corr = matches[cols].copy()
+    corr["toss_win_match_win"] = corr["toss_win_match_win"].astype(int)
+
+    fig, ax = plt.subplots(figsize=(6, 5))
+    mask = np.triu(np.ones_like(corr.corr(), dtype=bool))
+    sns.heatmap(corr.corr(), annot=True, fmt=".2f", cmap="coolwarm",
+                mask=mask, linewidths=0.5, ax=ax, vmin=-1, vmax=1)
+    ax.set_title("🔗 Feature Correlation Matrix", fontsize=13, fontweight="bold", pad=10)
+    fig.tight_layout()
+    save(fig, "08_correlation_heatmap.png")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# CHART 9 – Win % each team when fielding first vs batting first
+# ══════════════════════════════════════════════════════════════════════════════
+def chart_toss_team_winrate(matches):
+    df = matches.copy()
+    df["batting_first"] = df.apply(
+        lambda r: r["team1"] if r["toss_decision"] == "field"
+        else (r["team2"] if r["toss_decision"] == "bat" else r["toss_winner"]),
+        axis=1
+    )
+    df["won_batting_first"] = df["batting_first"] == df["winner"]
+
+    team_stats = df.groupby("batting_first")["won_batting_first"].agg(["sum","count"])
+    team_stats["bat_first_win_pct"] = (team_stats["sum"] / team_stats["count"] * 100).round(1)
+    team_stats = team_stats.sort_values("bat_first_win_pct")
+
+    fig, ax = plt.subplots(figsize=(9, 5))
+    colors = ["#e74c3c" if p < 50 else "#2ecc71" for p in team_stats["bat_first_win_pct"]]
+    bars = ax.barh(team_stats.index, team_stats["bat_first_win_pct"],
+                   color=colors, edgecolor="white")
+    ax.axvline(50, color="black", linestyle="--", linewidth=1.2, label="50% line")
+    for bar, val in zip(bars, team_stats["bat_first_win_pct"]):
+        ax.text(bar.get_width() + 0.5, bar.get_y() + bar.get_height()/2,
+                f"{val}%", va="center", fontsize=9.5)
+
+    ax.set_title("🏟️ Win % When Batting First — by Team", fontsize=14, fontweight="bold", pad=12)
+    ax.set_xlabel("Win % (batting first)", fontsize=11)
+    ax.set_xlim(0, 85)
+    ax.legend(fontsize=10)
+    ax.spines[["top", "right"]].set_visible(False)
+    fig.tight_layout()
+    save(fig, "09_bat_first_win_pct.png")
+
+
+def main():
+    print("Generating visualizations …")
+    matches, deliveries = load()
+
+    chart_team_wins(matches)
+    chart_matches_per_season(matches)
+    chart_toss_decision(matches)
+    chart_top_scorers(deliveries)
+    chart_top_wicket_takers(deliveries)
+    chart_runs_by_phase(deliveries)
+    chart_over_run_heatmap(deliveries)
+    chart_correlation(matches)
+    chart_toss_team_winrate(matches)
+
+    print(f"\n✅ All charts saved to → {FIG_DIR}")
+
+
+if __name__ == "__main__":
+    main()
 
