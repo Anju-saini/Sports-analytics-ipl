@@ -2,7 +2,7 @@
 ==============================================================
  IPL SPORTS ANALYTICS PROJECT
  File: src/04_ml_model.py
- Author: [Your Name]
+ Author: Anju saini
  Description: Predict match winner using Logistic Regression
               and Random Forest. Includes feature engineering,
               model evaluation, and feature importance plot.
