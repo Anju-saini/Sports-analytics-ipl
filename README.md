@@ -1,8 +1,6 @@
 # Sports-analytics-ipl
 # PL Sports Analytics Project
 
-> **End-to-end Data Analytics & Machine Learning project on Indian Premier League (IPL) cricket data.**  
-> Covers Data Cleaning → EDA → Visualizations → ML Prediction — all in Python.
 
 ---
 
