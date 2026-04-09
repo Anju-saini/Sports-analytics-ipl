@@ -1,0 +1,401 @@
+match_id,season,city,venue,team1,team2,toss_winner,toss_decision,result,winner,win_by_runs,win_by_wickets,player_of_match,toss_win_match_win
+1,2021,Mumbai,Eden Gardens,Kolkata Knight Riders,Royal Challengers Bangalore,Royal Challengers Bangalore,field,runs,Kolkata Knight Riders,0,5,Sunil Narine,False
+2,2018,Chennai,Eden Gardens,Mumbai Indians,Punjab Kings,Punjab Kings,field,wickets,Mumbai Indians,0,7,Jasprit Bumrah,False
+3,2022,Kolkata,M.A. Chidambaram Stadium,Mumbai Indians,Rajasthan Royals,Rajasthan Royals,field,wickets,Rajasthan Royals,39,0,Yuzvendra Chahal,True
+4,2019,Chandigarh,Wankhede Stadium,Delhi Capitals,Kolkata Knight Riders,Kolkata Knight Riders,bat,wickets,Kolkata Knight Riders,0,3,Andre Russell,True
+5,2021,Chandigarh,Feroz Shah Kotla,Royal Challengers Bangalore,Chennai Super Kings,Royal Challengers Bangalore,bat,runs,Chennai Super Kings,99,0,Ambati Rayudu,False
+6,2017,Jaipur,Punjab Cricket Association Stadium,Royal Challengers Bangalore,Rajasthan Royals,Royal Challengers Bangalore,bat,runs,Royal Challengers Bangalore,0,3,Faf du Plessis,True
+7,2021,Jaipur,Feroz Shah Kotla,Delhi Capitals,Chennai Super Kings,Chennai Super Kings,field,wickets,Chennai Super Kings,79,0,Deepak Chahar,True
+8,2022,Chennai,Feroz Shah Kotla,Kolkata Knight Riders,Chennai Super Kings,Chennai Super Kings,bat,wickets,Chennai Super Kings,0,5,Ambati Rayudu,True
+9,2019,Chennai,Punjab Cricket Association Stadium,Royal Challengers Bangalore,Chennai Super Kings,Royal Challengers Bangalore,bat,runs,Chennai Super Kings,0,5,Ruturaj Gaikwad,False
+10,2018,Jaipur,M.A. Chidambaram Stadium,Mumbai Indians,Rajasthan Royals,Rajasthan Royals,bat,wickets,Mumbai Indians,0,7,Jasprit Bumrah,False
+11,2022,Delhi,M. Chinnaswamy Stadium,Mumbai Indians,Punjab Kings,Punjab Kings,field,wickets,Punjab Kings,91,0,KL Rahul,True
+12,2022,Delhi,Sawai Mansingh Stadium,Punjab Kings,Royal Challengers Bangalore,Punjab Kings,field,wickets,Royal Challengers Bangalore,23,0,Dinesh Karthik,False
+13,2017,Kolkata,Eden Gardens,Chennai Super Kings,Kolkata Knight Riders,Kolkata Knight Riders,field,wickets,Chennai Super Kings,59,0,Ravindra Jadeja,False
+14,2020,Hyderabad,Wankhede Stadium,Royal Challengers Bangalore,Punjab Kings,Punjab Kings,field,wickets,Royal Challengers Bangalore,0,8,Dinesh Karthik,False
+15,2019,Kolkata,Rajiv Gandhi Stadium,Kolkata Knight Riders,Chennai Super Kings,Chennai Super Kings,field,runs,Chennai Super Kings,0,3,MS Dhoni,True
+16,2016,Hyderabad,M. Chinnaswamy Stadium,Delhi Capitals,Kolkata Knight Riders,Delhi Capitals,bat,wickets,Kolkata Knight Riders,46,0,Shubman Gill,False
+17,2022,Chennai,Punjab Cricket Association Stadium,Delhi Capitals,Mumbai Indians,Delhi Capitals,field,runs,Mumbai Indians,0,4,Hardik Pandya,False
+18,2020,Mumbai,Sawai Mansingh Stadium,Kolkata Knight Riders,Rajasthan Royals,Kolkata Knight Riders,field,wickets,Kolkata Knight Riders,0,3,Shubman Gill,True
+19,2016,Kolkata,M. Chinnaswamy Stadium,Rajasthan Royals,Mumbai Indians,Mumbai Indians,field,runs,Mumbai Indians,72,0,Suryakumar Yadav,True
+20,2019,Kolkata,Punjab Cricket Association Stadium,Sunrisers Hyderabad,Punjab Kings,Punjab Kings,field,wickets,Sunrisers Hyderabad,62,0,Bhuvneshwar Kumar,False
+21,2015,Hyderabad,Eden Gardens,Chennai Super Kings,Delhi Capitals,Chennai Super Kings,field,runs,Chennai Super Kings,35,0,MS Dhoni,True
+22,2020,Bangalore,M.A. Chidambaram Stadium,Delhi Capitals,Rajasthan Royals,Rajasthan Royals,field,runs,Delhi Capitals,19,0,Prithvi Shaw,False
+23,2023,Chennai,M. Chinnaswamy Stadium,Royal Challengers Bangalore,Punjab Kings,Punjab Kings,field,runs,Punjab Kings,0,6,Jonny Bairstow,True
+24,2015,Chennai,Punjab Cricket Association Stadium,Chennai Super Kings,Royal Challengers Bangalore,Royal Challengers Bangalore,field,runs,Chennai Super Kings,0,9,Ambati Rayudu,False
+25,2017,Chandigarh,Eden Gardens,Royal Challengers Bangalore,Kolkata Knight Riders,Kolkata Knight Riders,field,wickets,Royal Challengers Bangalore,84,0,Not Awarded,False
+26,2021,Bangalore,Eden Gardens,Rajasthan Royals,Mumbai Indians,Mumbai Indians,field,wickets,Rajasthan Royals,25,0,Sanju Samson,False
+27,2018,Hyderabad,M.A. Chidambaram Stadium,Mumbai Indians,Sunrisers Hyderabad,Mumbai Indians,bat,wickets,Sunrisers Hyderabad,0,5,David Warner,False
+28,2023,Chennai,Feroz Shah Kotla,Chennai Super Kings,Sunrisers Hyderabad,Sunrisers Hyderabad,field,runs,Chennai Super Kings,0,7,Ambati Rayudu,False
+29,2017,Bangalore,M. Chinnaswamy Stadium,Punjab Kings,Kolkata Knight Riders,Punjab Kings,bat,runs,Kolkata Knight Riders,0,5,Sunil Narine,False
+30,2019,Bangalore,M. Chinnaswamy Stadium,Delhi Capitals,Chennai Super Kings,Chennai Super Kings,field,runs,Chennai Super Kings,26,0,Deepak Chahar,True
+31,2017,Bangalore,Feroz Shah Kotla,Chennai Super Kings,Mumbai Indians,Chennai Super Kings,field,runs,Mumbai Indians,87,0,Jasprit Bumrah,False
+32,2021,Delhi,Wankhede Stadium,Chennai Super Kings,Royal Challengers Bangalore,Royal Challengers Bangalore,field,wickets,Chennai Super Kings,22,0,Ambati Rayudu,False
+33,2019,Chandigarh,Wankhede Stadium,Chennai Super Kings,Mumbai Indians,Chennai Super Kings,field,runs,Mumbai Indians,0,5,Ishan Kishan,False
+34,2023,Jaipur,Feroz Shah Kotla,Sunrisers Hyderabad,Kolkata Knight Riders,Kolkata Knight Riders,bat,runs,Kolkata Knight Riders,83,0,Sunil Narine,True
+35,2021,Mumbai,Sawai Mansingh Stadium,Chennai Super Kings,Delhi Capitals,Chennai Super Kings,bat,runs,Delhi Capitals,51,0,Axar Patel,False
+36,2016,Kolkata,Rajiv Gandhi Stadium,Royal Challengers Bangalore,Sunrisers Hyderabad,Sunrisers Hyderabad,field,runs,Sunrisers Hyderabad,0,3,David Warner,True
+37,2018,Chandigarh,Eden Gardens,Mumbai Indians,Royal Challengers Bangalore,Mumbai Indians,bat,wickets,Mumbai Indians,0,5,Jasprit Bumrah,True
+38,2023,Mumbai,Rajiv Gandhi Stadium,Rajasthan Royals,Sunrisers Hyderabad,Sunrisers Hyderabad,bat,wickets,Rajasthan Royals,0,2,Yuzvendra Chahal,False
+39,2016,Kolkata,Eden Gardens,Kolkata Knight Riders,Sunrisers Hyderabad,Kolkata Knight Riders,field,runs,Sunrisers Hyderabad,0,6,Nicholas Pooran,False
+40,2023,Delhi,Feroz Shah Kotla,Chennai Super Kings,Royal Challengers Bangalore,Chennai Super Kings,field,runs,Royal Challengers Bangalore,28,0,Virat Kohli,False
+41,2019,Bangalore,Wankhede Stadium,Delhi Capitals,Sunrisers Hyderabad,Sunrisers Hyderabad,field,runs,Delhi Capitals,0,5,Anrich Nortje,False
+42,2016,Chennai,Sawai Mansingh Stadium,Chennai Super Kings,Rajasthan Royals,Rajasthan Royals,bat,runs,Rajasthan Royals,45,0,Sanju Samson,True
+43,2018,Jaipur,Wankhede Stadium,Delhi Capitals,Royal Challengers Bangalore,Delhi Capitals,field,runs,Royal Challengers Bangalore,0,7,Virat Kohli,False
+44,2021,Hyderabad,Rajiv Gandhi Stadium,Royal Challengers Bangalore,Kolkata Knight Riders,Kolkata Knight Riders,field,tie,Royal Challengers Bangalore,0,5,Dinesh Karthik,False
+45,2022,Jaipur,Wankhede Stadium,Delhi Capitals,Royal Challengers Bangalore,Delhi Capitals,field,wickets,Delhi Capitals,0,1,Rishabh Pant,True
+46,2017,Delhi,Feroz Shah Kotla,Punjab Kings,Royal Challengers Bangalore,Punjab Kings,field,wickets,Royal Challengers Bangalore,0,8,Glenn Maxwell,False
+47,2015,Jaipur,Sawai Mansingh Stadium,Kolkata Knight Riders,Punjab Kings,Kolkata Knight Riders,bat,runs,Kolkata Knight Riders,0,4,Sunil Narine,True
+48,2018,Hyderabad,Rajiv Gandhi Stadium,Mumbai Indians,Chennai Super Kings,Chennai Super Kings,field,runs,Chennai Super Kings,47,0,Ruturaj Gaikwad,True
+49,2016,Chennai,Sawai Mansingh Stadium,Delhi Capitals,Punjab Kings,Delhi Capitals,field,wickets,Delhi Capitals,14,0,Mitchell Marsh,True
+50,2022,Delhi,M. Chinnaswamy Stadium,Delhi Capitals,Punjab Kings,Delhi Capitals,field,wickets,Punjab Kings,38,0,KL Rahul,False
+51,2018,Hyderabad,Eden Gardens,Mumbai Indians,Punjab Kings,Punjab Kings,field,wickets,Punjab Kings,0,3,Liam Livingstone,True
+52,2016,Delhi,Wankhede Stadium,Kolkata Knight Riders,Royal Challengers Bangalore,Royal Challengers Bangalore,field,runs,Royal Challengers Bangalore,0,3,Faf du Plessis,True
+53,2020,Bangalore,Sawai Mansingh Stadium,Chennai Super Kings,Rajasthan Royals,Rajasthan Royals,field,wickets,Chennai Super Kings,0,4,Ambati Rayudu,False
+54,2020,Delhi,M.A. Chidambaram Stadium,Delhi Capitals,Kolkata Knight Riders,Kolkata Knight Riders,field,runs,Delhi Capitals,40,0,Mitchell Marsh,False
+55,2018,Chennai,M. Chinnaswamy Stadium,Mumbai Indians,Delhi Capitals,Mumbai Indians,field,wickets,Delhi Capitals,0,7,Rishabh Pant,False
+56,2020,Chandigarh,Wankhede Stadium,Punjab Kings,Mumbai Indians,Punjab Kings,field,wickets,Mumbai Indians,0,4,Jasprit Bumrah,False
+57,2016,Kolkata,Eden Gardens,Punjab Kings,Royal Challengers Bangalore,Punjab Kings,field,wickets,Punjab Kings,9,0,Shikhar Dhawan,True
+58,2016,Hyderabad,Sawai Mansingh Stadium,Royal Challengers Bangalore,Kolkata Knight Riders,Royal Challengers Bangalore,field,runs,Kolkata Knight Riders,0,1,Venkatesh Iyer,False
+59,2018,Bangalore,Rajiv Gandhi Stadium,Mumbai Indians,Kolkata Knight Riders,Kolkata Knight Riders,field,wickets,Kolkata Knight Riders,0,8,Sunil Narine,True
+60,2022,Chennai,Eden Gardens,Royal Challengers Bangalore,Sunrisers Hyderabad,Royal Challengers Bangalore,field,runs,Royal Challengers Bangalore,0,7,Glenn Maxwell,True
+61,2021,Delhi,M.A. Chidambaram Stadium,Punjab Kings,Chennai Super Kings,Punjab Kings,field,runs,Chennai Super Kings,89,0,MS Dhoni,False
+62,2023,Bangalore,Sawai Mansingh Stadium,Kolkata Knight Riders,Sunrisers Hyderabad,Sunrisers Hyderabad,field,runs,Kolkata Knight Riders,14,0,Venkatesh Iyer,False
+63,2022,Chennai,Punjab Cricket Association Stadium,Chennai Super Kings,Royal Challengers Bangalore,Chennai Super Kings,field,wickets,Chennai Super Kings,0,2,Ravindra Jadeja,True
+64,2019,Chandigarh,Punjab Cricket Association Stadium,Mumbai Indians,Kolkata Knight Riders,Mumbai Indians,field,runs,Kolkata Knight Riders,0,1,Venkatesh Iyer,False
+65,2016,Bangalore,Feroz Shah Kotla,Rajasthan Royals,Royal Challengers Bangalore,Rajasthan Royals,bat,runs,Royal Challengers Bangalore,99,0,Glenn Maxwell,False
+66,2019,Bangalore,Wankhede Stadium,Punjab Kings,Delhi Capitals,Punjab Kings,bat,wickets,Delhi Capitals,59,0,Mitchell Marsh,False
+67,2022,Kolkata,Rajiv Gandhi Stadium,Punjab Kings,Delhi Capitals,Punjab Kings,bat,runs,Punjab Kings,0,2,KL Rahul,True
+68,2023,Jaipur,Feroz Shah Kotla,Rajasthan Royals,Chennai Super Kings,Rajasthan Royals,field,wickets,Rajasthan Royals,94,0,Trent Boult,True
+69,2023,Jaipur,Sawai Mansingh Stadium,Sunrisers Hyderabad,Kolkata Knight Riders,Kolkata Knight Riders,bat,runs,Sunrisers Hyderabad,0,4,Nicholas Pooran,False
+70,2015,Kolkata,Punjab Cricket Association Stadium,Punjab Kings,Chennai Super Kings,Chennai Super Kings,bat,runs,Chennai Super Kings,68,0,MS Dhoni,True
+71,2023,Mumbai,Punjab Cricket Association Stadium,Delhi Capitals,Sunrisers Hyderabad,Delhi Capitals,bat,wickets,Delhi Capitals,68,0,Prithvi Shaw,True
+72,2021,Hyderabad,Punjab Cricket Association Stadium,Kolkata Knight Riders,Rajasthan Royals,Kolkata Knight Riders,bat,runs,Kolkata Knight Riders,0,9,Pat Cummins,True
+73,2023,Kolkata,Sawai Mansingh Stadium,Mumbai Indians,Sunrisers Hyderabad,Sunrisers Hyderabad,bat,wickets,Mumbai Indians,8,0,Rohit Sharma,False
+74,2022,Delhi,Punjab Cricket Association Stadium,Rajasthan Royals,Sunrisers Hyderabad,Rajasthan Royals,field,wickets,Rajasthan Royals,2,0,Not Awarded,True
+75,2015,Hyderabad,Eden Gardens,Delhi Capitals,Mumbai Indians,Delhi Capitals,field,wickets,Delhi Capitals,86,0,Axar Patel,True
+76,2022,Hyderabad,M. Chinnaswamy Stadium,Rajasthan Royals,Delhi Capitals,Rajasthan Royals,bat,wickets,Rajasthan Royals,0,1,Yuzvendra Chahal,True
+77,2022,Chennai,Sawai Mansingh Stadium,Mumbai Indians,Chennai Super Kings,Chennai Super Kings,bat,runs,Mumbai Indians,0,1,Ishan Kishan,False
+78,2017,Delhi,Rajiv Gandhi Stadium,Royal Challengers Bangalore,Delhi Capitals,Royal Challengers Bangalore,bat,runs,Delhi Capitals,0,1,Anrich Nortje,False
+79,2015,Mumbai,M. Chinnaswamy Stadium,Mumbai Indians,Royal Challengers Bangalore,Royal Challengers Bangalore,bat,wickets,Royal Challengers Bangalore,93,0,Virat Kohli,True
+80,2022,Jaipur,Feroz Shah Kotla,Sunrisers Hyderabad,Rajasthan Royals,Sunrisers Hyderabad,field,wickets,Sunrisers Hyderabad,0,3,David Warner,True
+81,2017,Bangalore,Rajiv Gandhi Stadium,Mumbai Indians,Royal Challengers Bangalore,Royal Challengers Bangalore,field,wickets,Royal Challengers Bangalore,48,0,Harshal Patel,True
+82,2017,Chandigarh,M. Chinnaswamy Stadium,Mumbai Indians,Chennai Super Kings,Chennai Super Kings,bat,wickets,Mumbai Indians,30,0,Rohit Sharma,False
+83,2015,Chennai,M.A. Chidambaram Stadium,Sunrisers Hyderabad,Rajasthan Royals,Sunrisers Hyderabad,field,wickets,Sunrisers Hyderabad,0,5,David Warner,True
+84,2019,Chennai,Punjab Cricket Association Stadium,Kolkata Knight Riders,Chennai Super Kings,Chennai Super Kings,bat,wickets,Kolkata Knight Riders,35,0,Pat Cummins,False
+85,2021,Kolkata,M.A. Chidambaram Stadium,Punjab Kings,Delhi Capitals,Punjab Kings,field,runs,Delhi Capitals,0,2,Prithvi Shaw,False
+86,2023,Mumbai,Wankhede Stadium,Mumbai Indians,Kolkata Knight Riders,Kolkata Knight Riders,field,wickets,Kolkata Knight Riders,64,0,Shubman Gill,True
+87,2021,Bangalore,Wankhede Stadium,Sunrisers Hyderabad,Mumbai Indians,Sunrisers Hyderabad,field,wickets,Mumbai Indians,0,6,Hardik Pandya,False
+88,2023,Mumbai,M. Chinnaswamy Stadium,Delhi Capitals,Chennai Super Kings,Delhi Capitals,bat,runs,Delhi Capitals,0,3,Rishabh Pant,True
+89,2022,Hyderabad,M.A. Chidambaram Stadium,Royal Challengers Bangalore,Mumbai Indians,Mumbai Indians,field,wickets,Royal Challengers Bangalore,0,6,Harshal Patel,False
+90,2016,Chandigarh,Sawai Mansingh Stadium,Royal Challengers Bangalore,Punjab Kings,Royal Challengers Bangalore,bat,wickets,Royal Challengers Bangalore,0,5,Virat Kohli,True
+91,2015,Mumbai,Rajiv Gandhi Stadium,Mumbai Indians,Chennai Super Kings,Mumbai Indians,bat,wickets,Chennai Super Kings,48,0,Ambati Rayudu,False
+92,2021,Kolkata,M.A. Chidambaram Stadium,Kolkata Knight Riders,Rajasthan Royals,Rajasthan Royals,bat,runs,Kolkata Knight Riders,20,0,Andre Russell,False
+93,2021,Delhi,Wankhede Stadium,Kolkata Knight Riders,Punjab Kings,Kolkata Knight Riders,bat,runs,Kolkata Knight Riders,67,0,Andre Russell,True
+94,2022,Delhi,M.A. Chidambaram Stadium,Delhi Capitals,Rajasthan Royals,Delhi Capitals,field,wickets,Rajasthan Royals,0,3,Not Awarded,False
+95,2019,Hyderabad,Sawai Mansingh Stadium,Mumbai Indians,Kolkata Knight Riders,Kolkata Knight Riders,field,wickets,Mumbai Indians,0,8,Jasprit Bumrah,False
+96,2017,Jaipur,M.A. Chidambaram Stadium,Royal Challengers Bangalore,Punjab Kings,Punjab Kings,bat,runs,Punjab Kings,0,9,Shikhar Dhawan,True
+97,2022,Kolkata,Rajiv Gandhi Stadium,Kolkata Knight Riders,Sunrisers Hyderabad,Kolkata Knight Riders,field,runs,Sunrisers Hyderabad,61,0,Rashid Khan,False
+98,2020,Kolkata,Feroz Shah Kotla,Mumbai Indians,Chennai Super Kings,Mumbai Indians,field,wickets,Mumbai Indians,9,0,Hardik Pandya,True
+99,2017,Mumbai,Sawai Mansingh Stadium,Rajasthan Royals,Chennai Super Kings,Chennai Super Kings,field,runs,Chennai Super Kings,0,2,Ruturaj Gaikwad,True
+100,2015,Chandigarh,Wankhede Stadium,Kolkata Knight Riders,Delhi Capitals,Delhi Capitals,field,wickets,Kolkata Knight Riders,0,8,Shubman Gill,False
+101,2017,Kolkata,Rajiv Gandhi Stadium,Sunrisers Hyderabad,Mumbai Indians,Sunrisers Hyderabad,field,tie,Sunrisers Hyderabad,81,0,Rashid Khan,True
+102,2019,Chennai,M.A. Chidambaram Stadium,Rajasthan Royals,Mumbai Indians,Mumbai Indians,field,runs,Rajasthan Royals,98,0,Sanju Samson,False
+103,2017,Jaipur,M.A. Chidambaram Stadium,Punjab Kings,Royal Challengers Bangalore,Punjab Kings,field,wickets,Royal Challengers Bangalore,88,0,Virat Kohli,False
+104,2015,Mumbai,Feroz Shah Kotla,Kolkata Knight Riders,Sunrisers Hyderabad,Kolkata Knight Riders,bat,runs,Kolkata Knight Riders,96,0,Sunil Narine,True
+105,2019,Chennai,Wankhede Stadium,Royal Challengers Bangalore,Delhi Capitals,Royal Challengers Bangalore,field,runs,Royal Challengers Bangalore,0,3,Dinesh Karthik,True
+106,2021,Hyderabad,Wankhede Stadium,Chennai Super Kings,Punjab Kings,Chennai Super Kings,field,wickets,Chennai Super Kings,0,1,Ambati Rayudu,True
+107,2021,Delhi,Eden Gardens,Rajasthan Royals,Punjab Kings,Rajasthan Royals,bat,runs,Punjab Kings,45,0,Jonny Bairstow,False
+108,2023,Hyderabad,Wankhede Stadium,Punjab Kings,Rajasthan Royals,Rajasthan Royals,field,tie,Rajasthan Royals,87,0,Jos Buttler,True
+109,2017,Delhi,Feroz Shah Kotla,Delhi Capitals,Rajasthan Royals,Rajasthan Royals,bat,wickets,Delhi Capitals,0,5,Mitchell Marsh,False
+110,2021,Hyderabad,Punjab Cricket Association Stadium,Delhi Capitals,Rajasthan Royals,Rajasthan Royals,bat,runs,Rajasthan Royals,40,0,Trent Boult,True
+111,2015,Kolkata,Eden Gardens,Royal Challengers Bangalore,Chennai Super Kings,Chennai Super Kings,bat,runs,Royal Challengers Bangalore,76,0,Faf du Plessis,False
+112,2018,Chennai,Eden Gardens,Kolkata Knight Riders,Delhi Capitals,Kolkata Knight Riders,bat,runs,Kolkata Knight Riders,54,0,Andre Russell,True
+113,2018,Delhi,M.A. Chidambaram Stadium,Mumbai Indians,Punjab Kings,Mumbai Indians,field,runs,Mumbai Indians,76,0,Rohit Sharma,True
+114,2019,Mumbai,M.A. Chidambaram Stadium,Kolkata Knight Riders,Rajasthan Royals,Kolkata Knight Riders,field,runs,Kolkata Knight Riders,0,5,Shubman Gill,True
+115,2021,Chennai,Wankhede Stadium,Royal Challengers Bangalore,Chennai Super Kings,Royal Challengers Bangalore,field,runs,Royal Challengers Bangalore,47,0,Faf du Plessis,True
+116,2021,Mumbai,Eden Gardens,Delhi Capitals,Sunrisers Hyderabad,Sunrisers Hyderabad,field,wickets,Delhi Capitals,15,0,Prithvi Shaw,False
+117,2018,Chennai,M. Chinnaswamy Stadium,Kolkata Knight Riders,Chennai Super Kings,Kolkata Knight Riders,bat,wickets,Kolkata Knight Riders,19,0,Andre Russell,True
+118,2021,Chennai,M.A. Chidambaram Stadium,Delhi Capitals,Rajasthan Royals,Delhi Capitals,field,wickets,Delhi Capitals,26,0,Mitchell Marsh,True
+119,2017,Hyderabad,Feroz Shah Kotla,Rajasthan Royals,Royal Challengers Bangalore,Royal Challengers Bangalore,field,wickets,Royal Challengers Bangalore,52,0,Faf du Plessis,True
+120,2020,Delhi,M. Chinnaswamy Stadium,Punjab Kings,Royal Challengers Bangalore,Royal Challengers Bangalore,field,runs,Royal Challengers Bangalore,0,8,Glenn Maxwell,True
+121,2016,Delhi,M.A. Chidambaram Stadium,Mumbai Indians,Punjab Kings,Punjab Kings,bat,runs,Mumbai Indians,22,0,Suryakumar Yadav,False
+122,2023,Chandigarh,Sawai Mansingh Stadium,Rajasthan Royals,Royal Challengers Bangalore,Royal Challengers Bangalore,field,wickets,Royal Challengers Bangalore,21,0,Harshal Patel,True
+123,2019,Chennai,Sawai Mansingh Stadium,Delhi Capitals,Punjab Kings,Delhi Capitals,field,wickets,Punjab Kings,51,0,KL Rahul,False
+124,2020,Kolkata,M.A. Chidambaram Stadium,Delhi Capitals,Punjab Kings,Delhi Capitals,field,runs,Punjab Kings,38,0,Shikhar Dhawan,False
+125,2018,Kolkata,Eden Gardens,Chennai Super Kings,Rajasthan Royals,Rajasthan Royals,field,wickets,Chennai Super Kings,20,0,Ruturaj Gaikwad,False
+126,2021,Mumbai,Punjab Cricket Association Stadium,Chennai Super Kings,Kolkata Knight Riders,Chennai Super Kings,field,wickets,Chennai Super Kings,0,3,Deepak Chahar,True
+127,2023,Mumbai,Punjab Cricket Association Stadium,Rajasthan Royals,Punjab Kings,Rajasthan Royals,field,wickets,Rajasthan Royals,51,0,Not Awarded,True
+128,2021,Hyderabad,Eden Gardens,Sunrisers Hyderabad,Kolkata Knight Riders,Sunrisers Hyderabad,field,runs,Sunrisers Hyderabad,0,3,Nicholas Pooran,True
+129,2015,Chennai,Rajiv Gandhi Stadium,Rajasthan Royals,Delhi Capitals,Delhi Capitals,bat,wickets,Rajasthan Royals,0,2,Shimron Hetmyer,False
+130,2015,Mumbai,Punjab Cricket Association Stadium,Chennai Super Kings,Royal Challengers Bangalore,Chennai Super Kings,field,wickets,Royal Challengers Bangalore,71,0,Harshal Patel,False
+131,2023,Mumbai,Sawai Mansingh Stadium,Delhi Capitals,Chennai Super Kings,Chennai Super Kings,field,wickets,Delhi Capitals,92,0,Anrich Nortje,False
+132,2023,Jaipur,Feroz Shah Kotla,Royal Challengers Bangalore,Rajasthan Royals,Royal Challengers Bangalore,field,wickets,Rajasthan Royals,0,2,Jos Buttler,False
+133,2018,Chennai,Eden Gardens,Rajasthan Royals,Royal Challengers Bangalore,Rajasthan Royals,bat,wickets,Rajasthan Royals,0,8,Sanju Samson,True
+134,2023,Bangalore,Wankhede Stadium,Delhi Capitals,Royal Challengers Bangalore,Delhi Capitals,bat,wickets,Delhi Capitals,22,0,Prithvi Shaw,True
+135,2017,Hyderabad,Sawai Mansingh Stadium,Royal Challengers Bangalore,Punjab Kings,Punjab Kings,field,runs,Punjab Kings,0,7,Kagiso Rabada,True
+136,2021,Mumbai,Feroz Shah Kotla,Royal Challengers Bangalore,Mumbai Indians,Royal Challengers Bangalore,bat,wickets,Mumbai Indians,0,2,Hardik Pandya,False
+137,2020,Hyderabad,Feroz Shah Kotla,Chennai Super Kings,Punjab Kings,Punjab Kings,field,wickets,Punjab Kings,0,6,Jonny Bairstow,True
+138,2022,Delhi,Eden Gardens,Rajasthan Royals,Delhi Capitals,Delhi Capitals,bat,wickets,Delhi Capitals,0,2,Anrich Nortje,True
+139,2023,Hyderabad,Feroz Shah Kotla,Kolkata Knight Riders,Delhi Capitals,Delhi Capitals,bat,runs,Delhi Capitals,0,2,Axar Patel,True
+140,2019,Bangalore,Eden Gardens,Mumbai Indians,Royal Challengers Bangalore,Mumbai Indians,field,runs,Mumbai Indians,0,8,Rohit Sharma,True
+141,2015,Kolkata,Punjab Cricket Association Stadium,Chennai Super Kings,Punjab Kings,Chennai Super Kings,field,wickets,Chennai Super Kings,0,2,MS Dhoni,True
+142,2017,Bangalore,M.A. Chidambaram Stadium,Chennai Super Kings,Mumbai Indians,Chennai Super Kings,bat,wickets,Chennai Super Kings,91,0,Deepak Chahar,True
+143,2022,Kolkata,Sawai Mansingh Stadium,Kolkata Knight Riders,Mumbai Indians,Kolkata Knight Riders,bat,wickets,Kolkata Knight Riders,55,0,Pat Cummins,True
+144,2020,Hyderabad,Rajiv Gandhi Stadium,Mumbai Indians,Punjab Kings,Punjab Kings,bat,wickets,Mumbai Indians,1,0,Suryakumar Yadav,False
+145,2022,Kolkata,M.A. Chidambaram Stadium,Delhi Capitals,Rajasthan Royals,Rajasthan Royals,field,wickets,Delhi Capitals,0,7,Axar Patel,False
+146,2023,Delhi,Sawai Mansingh Stadium,Sunrisers Hyderabad,Chennai Super Kings,Chennai Super Kings,bat,wickets,Chennai Super Kings,0,8,Deepak Chahar,True
+147,2018,Chennai,Eden Gardens,Rajasthan Royals,Sunrisers Hyderabad,Rajasthan Royals,field,wickets,Rajasthan Royals,38,0,Shimron Hetmyer,True
+148,2015,Kolkata,Sawai Mansingh Stadium,Sunrisers Hyderabad,Kolkata Knight Riders,Kolkata Knight Riders,field,wickets,Kolkata Knight Riders,0,6,Shubman Gill,True
+149,2015,Kolkata,Punjab Cricket Association Stadium,Delhi Capitals,Mumbai Indians,Delhi Capitals,bat,wickets,Delhi Capitals,0,7,Anrich Nortje,True
+150,2018,Hyderabad,Eden Gardens,Punjab Kings,Mumbai Indians,Mumbai Indians,field,runs,Punjab Kings,25,0,Shikhar Dhawan,False
+151,2021,Delhi,M.A. Chidambaram Stadium,Chennai Super Kings,Sunrisers Hyderabad,Chennai Super Kings,field,wickets,Chennai Super Kings,82,0,Ravindra Jadeja,True
+152,2016,Chandigarh,Wankhede Stadium,Mumbai Indians,Delhi Capitals,Mumbai Indians,bat,wickets,Delhi Capitals,0,1,Axar Patel,False
+153,2017,Chandigarh,Wankhede Stadium,Chennai Super Kings,Mumbai Indians,Mumbai Indians,field,runs,Chennai Super Kings,0,1,MS Dhoni,False
+154,2015,Chandigarh,M. Chinnaswamy Stadium,Royal Challengers Bangalore,Delhi Capitals,Delhi Capitals,field,runs,Royal Challengers Bangalore,12,0,Harshal Patel,False
+155,2019,Chandigarh,M. Chinnaswamy Stadium,Chennai Super Kings,Royal Challengers Bangalore,Royal Challengers Bangalore,field,runs,Royal Challengers Bangalore,0,5,Glenn Maxwell,True
+156,2015,Chennai,Sawai Mansingh Stadium,Chennai Super Kings,Kolkata Knight Riders,Kolkata Knight Riders,field,runs,Kolkata Knight Riders,90,0,Pat Cummins,True
+157,2022,Bangalore,Wankhede Stadium,Delhi Capitals,Mumbai Indians,Delhi Capitals,field,runs,Delhi Capitals,27,0,Anrich Nortje,True
+158,2015,Hyderabad,Eden Gardens,Delhi Capitals,Sunrisers Hyderabad,Sunrisers Hyderabad,field,runs,Sunrisers Hyderabad,8,0,Rashid Khan,True
+159,2015,Hyderabad,Feroz Shah Kotla,Delhi Capitals,Chennai Super Kings,Chennai Super Kings,field,wickets,Delhi Capitals,0,3,Rishabh Pant,False
+160,2016,Jaipur,Eden Gardens,Sunrisers Hyderabad,Punjab Kings,Punjab Kings,field,wickets,Punjab Kings,65,0,Kagiso Rabada,True
+161,2016,Delhi,Feroz Shah Kotla,Royal Challengers Bangalore,Delhi Capitals,Royal Challengers Bangalore,field,runs,Delhi Capitals,57,0,Mitchell Marsh,False
+162,2020,Chandigarh,M.A. Chidambaram Stadium,Punjab Kings,Rajasthan Royals,Punjab Kings,field,runs,Punjab Kings,0,6,Shikhar Dhawan,True
+163,2021,Chennai,Rajiv Gandhi Stadium,Punjab Kings,Sunrisers Hyderabad,Sunrisers Hyderabad,bat,wickets,Sunrisers Hyderabad,0,1,Kane Williamson,True
+164,2019,Delhi,Feroz Shah Kotla,Delhi Capitals,Chennai Super Kings,Delhi Capitals,bat,runs,Delhi Capitals,40,0,Prithvi Shaw,True
+165,2015,Chandigarh,Wankhede Stadium,Mumbai Indians,Punjab Kings,Punjab Kings,bat,wickets,Punjab Kings,0,7,Liam Livingstone,True
+166,2015,Chennai,Eden Gardens,Sunrisers Hyderabad,Mumbai Indians,Sunrisers Hyderabad,bat,wickets,Mumbai Indians,0,4,Hardik Pandya,False
+167,2017,Delhi,M.A. Chidambaram Stadium,Kolkata Knight Riders,Delhi Capitals,Kolkata Knight Riders,bat,wickets,Kolkata Knight Riders,0,8,Andre Russell,True
+168,2016,Hyderabad,Wankhede Stadium,Mumbai Indians,Kolkata Knight Riders,Mumbai Indians,field,runs,Mumbai Indians,84,0,Hardik Pandya,True
+169,2019,Hyderabad,M.A. Chidambaram Stadium,Rajasthan Royals,Chennai Super Kings,Rajasthan Royals,bat,wickets,Rajasthan Royals,56,0,Yuzvendra Chahal,True
+170,2020,Bangalore,Rajiv Gandhi Stadium,Rajasthan Royals,Mumbai Indians,Mumbai Indians,field,runs,Rajasthan Royals,49,0,Jos Buttler,False
+171,2021,Mumbai,Punjab Cricket Association Stadium,Mumbai Indians,Sunrisers Hyderabad,Sunrisers Hyderabad,bat,wickets,Mumbai Indians,0,2,Suryakumar Yadav,False
+172,2018,Bangalore,Eden Gardens,Delhi Capitals,Rajasthan Royals,Rajasthan Royals,field,wickets,Rajasthan Royals,0,2,Shimron Hetmyer,True
+173,2021,Kolkata,Sawai Mansingh Stadium,Kolkata Knight Riders,Delhi Capitals,Kolkata Knight Riders,field,runs,Delhi Capitals,49,0,Mitchell Marsh,False
+174,2022,Bangalore,Eden Gardens,Kolkata Knight Riders,Chennai Super Kings,Chennai Super Kings,field,runs,Kolkata Knight Riders,0,5,Shubman Gill,False
+175,2015,Bangalore,M. Chinnaswamy Stadium,Sunrisers Hyderabad,Chennai Super Kings,Chennai Super Kings,field,runs,Sunrisers Hyderabad,0,8,Kane Williamson,False
+176,2020,Jaipur,Rajiv Gandhi Stadium,Kolkata Knight Riders,Royal Challengers Bangalore,Royal Challengers Bangalore,bat,wickets,Kolkata Knight Riders,8,0,Shubman Gill,False
+177,2022,Delhi,Eden Gardens,Rajasthan Royals,Royal Challengers Bangalore,Rajasthan Royals,field,runs,Royal Challengers Bangalore,43,0,Virat Kohli,False
+178,2019,Jaipur,M. Chinnaswamy Stadium,Royal Challengers Bangalore,Sunrisers Hyderabad,Royal Challengers Bangalore,bat,wickets,Sunrisers Hyderabad,20,0,Rashid Khan,False
+179,2018,Mumbai,Sawai Mansingh Stadium,Delhi Capitals,Rajasthan Royals,Delhi Capitals,field,runs,Delhi Capitals,97,0,Anrich Nortje,True
+180,2016,Kolkata,Feroz Shah Kotla,Kolkata Knight Riders,Sunrisers Hyderabad,Sunrisers Hyderabad,bat,wickets,Kolkata Knight Riders,90,0,Andre Russell,False
+181,2020,Delhi,M.A. Chidambaram Stadium,Sunrisers Hyderabad,Mumbai Indians,Mumbai Indians,field,wickets,Sunrisers Hyderabad,0,7,Nicholas Pooran,False
+182,2020,Chennai,Sawai Mansingh Stadium,Rajasthan Royals,Mumbai Indians,Mumbai Indians,field,wickets,Rajasthan Royals,85,0,Yuzvendra Chahal,False
+183,2015,Chandigarh,Wankhede Stadium,Royal Challengers Bangalore,Sunrisers Hyderabad,Royal Challengers Bangalore,bat,wickets,Royal Challengers Bangalore,49,0,Glenn Maxwell,True
+184,2023,Kolkata,Rajiv Gandhi Stadium,Chennai Super Kings,Rajasthan Royals,Chennai Super Kings,bat,runs,Rajasthan Royals,0,8,Jos Buttler,False
+185,2020,Hyderabad,Feroz Shah Kotla,Chennai Super Kings,Sunrisers Hyderabad,Sunrisers Hyderabad,bat,runs,Sunrisers Hyderabad,62,0,Kane Williamson,True
+186,2017,Mumbai,Wankhede Stadium,Royal Challengers Bangalore,Rajasthan Royals,Royal Challengers Bangalore,bat,wickets,Rajasthan Royals,54,0,Yuzvendra Chahal,False
+187,2018,Kolkata,Wankhede Stadium,Rajasthan Royals,Sunrisers Hyderabad,Rajasthan Royals,field,runs,Sunrisers Hyderabad,9,0,Bhuvneshwar Kumar,False
+188,2018,Chandigarh,Rajiv Gandhi Stadium,Sunrisers Hyderabad,Punjab Kings,Sunrisers Hyderabad,bat,runs,Sunrisers Hyderabad,88,0,Bhuvneshwar Kumar,True
+189,2017,Bangalore,Feroz Shah Kotla,Royal Challengers Bangalore,Delhi Capitals,Royal Challengers Bangalore,bat,runs,Delhi Capitals,37,0,Rishabh Pant,False
+190,2017,Kolkata,Punjab Cricket Association Stadium,Delhi Capitals,Rajasthan Royals,Rajasthan Royals,bat,runs,Delhi Capitals,49,0,Rishabh Pant,False
+191,2017,Bangalore,Wankhede Stadium,Delhi Capitals,Royal Challengers Bangalore,Delhi Capitals,field,runs,Royal Challengers Bangalore,0,6,Glenn Maxwell,False
+192,2018,Chandigarh,Wankhede Stadium,Chennai Super Kings,Rajasthan Royals,Chennai Super Kings,bat,wickets,Rajasthan Royals,17,0,Shimron Hetmyer,False
+193,2021,Hyderabad,Feroz Shah Kotla,Kolkata Knight Riders,Rajasthan Royals,Kolkata Knight Riders,bat,runs,Rajasthan Royals,0,1,Jos Buttler,False
+194,2018,Delhi,Eden Gardens,Sunrisers Hyderabad,Rajasthan Royals,Sunrisers Hyderabad,bat,wickets,Rajasthan Royals,0,7,Trent Boult,False
+195,2023,Chennai,Wankhede Stadium,Chennai Super Kings,Punjab Kings,Punjab Kings,field,runs,Chennai Super Kings,0,8,MS Dhoni,False
+196,2015,Hyderabad,M.A. Chidambaram Stadium,Kolkata Knight Riders,Punjab Kings,Punjab Kings,field,wickets,Punjab Kings,0,2,Kagiso Rabada,True
+197,2022,Bangalore,Feroz Shah Kotla,Kolkata Knight Riders,Mumbai Indians,Kolkata Knight Riders,bat,runs,Kolkata Knight Riders,0,8,Andre Russell,True
+198,2021,Bangalore,Wankhede Stadium,Punjab Kings,Rajasthan Royals,Punjab Kings,bat,wickets,Rajasthan Royals,55,0,Yuzvendra Chahal,False
+199,2016,Chennai,Rajiv Gandhi Stadium,Delhi Capitals,Royal Challengers Bangalore,Delhi Capitals,field,wickets,Royal Challengers Bangalore,41,0,Dinesh Karthik,False
+200,2022,Delhi,Sawai Mansingh Stadium,Rajasthan Royals,Royal Challengers Bangalore,Rajasthan Royals,field,runs,Royal Challengers Bangalore,39,0,Dinesh Karthik,False
+201,2015,Kolkata,M.A. Chidambaram Stadium,Mumbai Indians,Punjab Kings,Mumbai Indians,bat,wickets,Mumbai Indians,0,9,Rohit Sharma,True
+202,2023,Bangalore,M. Chinnaswamy Stadium,Rajasthan Royals,Delhi Capitals,Rajasthan Royals,field,tie,Rajasthan Royals,64,0,Yuzvendra Chahal,True
+203,2023,Mumbai,M. Chinnaswamy Stadium,Mumbai Indians,Delhi Capitals,Delhi Capitals,field,wickets,Delhi Capitals,11,0,Mitchell Marsh,True
+204,2016,Mumbai,Sawai Mansingh Stadium,Royal Challengers Bangalore,Punjab Kings,Royal Challengers Bangalore,bat,wickets,Punjab Kings,19,0,Liam Livingstone,False
+205,2021,Chandigarh,M. Chinnaswamy Stadium,Delhi Capitals,Rajasthan Royals,Rajasthan Royals,field,runs,Delhi Capitals,0,9,Axar Patel,False
+206,2017,Hyderabad,Sawai Mansingh Stadium,Kolkata Knight Riders,Chennai Super Kings,Chennai Super Kings,field,wickets,Chennai Super Kings,0,2,Not Awarded,True
+207,2021,Bangalore,Wankhede Stadium,Sunrisers Hyderabad,Kolkata Knight Riders,Sunrisers Hyderabad,field,runs,Kolkata Knight Riders,0,4,Andre Russell,False
+208,2023,Delhi,M.A. Chidambaram Stadium,Mumbai Indians,Delhi Capitals,Delhi Capitals,bat,runs,Mumbai Indians,0,4,Ishan Kishan,False
+209,2018,Chandigarh,M.A. Chidambaram Stadium,Rajasthan Royals,Royal Challengers Bangalore,Royal Challengers Bangalore,bat,tie,Rajasthan Royals,0,2,Sanju Samson,False
+210,2015,Hyderabad,Eden Gardens,Kolkata Knight Riders,Delhi Capitals,Delhi Capitals,field,runs,Delhi Capitals,40,0,Axar Patel,True
+211,2016,Hyderabad,Sawai Mansingh Stadium,Mumbai Indians,Punjab Kings,Punjab Kings,field,wickets,Mumbai Indians,0,3,Ishan Kishan,False
+212,2015,Chandigarh,M.A. Chidambaram Stadium,Mumbai Indians,Rajasthan Royals,Rajasthan Royals,field,wickets,Mumbai Indians,0,1,Rohit Sharma,False
+213,2019,Jaipur,Eden Gardens,Punjab Kings,Sunrisers Hyderabad,Sunrisers Hyderabad,field,wickets,Sunrisers Hyderabad,0,6,Rashid Khan,True
+214,2019,Hyderabad,Feroz Shah Kotla,Mumbai Indians,Chennai Super Kings,Mumbai Indians,field,tie,Mumbai Indians,0,8,Jasprit Bumrah,True
+215,2021,Kolkata,Eden Gardens,Sunrisers Hyderabad,Rajasthan Royals,Rajasthan Royals,field,runs,Sunrisers Hyderabad,0,3,Bhuvneshwar Kumar,False
+216,2023,Mumbai,Rajiv Gandhi Stadium,Delhi Capitals,Rajasthan Royals,Rajasthan Royals,bat,runs,Rajasthan Royals,0,5,Shimron Hetmyer,True
+217,2023,Mumbai,Punjab Cricket Association Stadium,Sunrisers Hyderabad,Royal Challengers Bangalore,Royal Challengers Bangalore,bat,runs,Royal Challengers Bangalore,0,1,Glenn Maxwell,True
+218,2017,Hyderabad,Wankhede Stadium,Chennai Super Kings,Rajasthan Royals,Chennai Super Kings,field,runs,Rajasthan Royals,33,0,Trent Boult,False
+219,2017,Mumbai,Feroz Shah Kotla,Kolkata Knight Riders,Mumbai Indians,Mumbai Indians,bat,runs,Kolkata Knight Riders,45,0,Pat Cummins,False
+220,2017,Delhi,Punjab Cricket Association Stadium,Delhi Capitals,Chennai Super Kings,Delhi Capitals,field,runs,Chennai Super Kings,0,9,Ruturaj Gaikwad,False
+221,2018,Jaipur,Punjab Cricket Association Stadium,Punjab Kings,Rajasthan Royals,Rajasthan Royals,bat,wickets,Punjab Kings,0,8,KL Rahul,False
+222,2022,Jaipur,Feroz Shah Kotla,Delhi Capitals,Royal Challengers Bangalore,Delhi Capitals,bat,wickets,Delhi Capitals,69,0,Axar Patel,True
+223,2020,Hyderabad,Rajiv Gandhi Stadium,Delhi Capitals,Chennai Super Kings,Delhi Capitals,bat,runs,Chennai Super Kings,0,7,Ravindra Jadeja,False
+224,2022,Mumbai,Eden Gardens,Rajasthan Royals,Royal Challengers Bangalore,Royal Challengers Bangalore,field,wickets,Rajasthan Royals,0,5,Sanju Samson,False
+225,2015,Chennai,Wankhede Stadium,Delhi Capitals,Sunrisers Hyderabad,Sunrisers Hyderabad,field,runs,Sunrisers Hyderabad,91,0,Bhuvneshwar Kumar,True
+226,2022,Bangalore,Eden Gardens,Punjab Kings,Kolkata Knight Riders,Punjab Kings,bat,runs,Punjab Kings,0,5,Shikhar Dhawan,True
+227,2018,Chandigarh,M.A. Chidambaram Stadium,Sunrisers Hyderabad,Delhi Capitals,Delhi Capitals,field,wickets,Sunrisers Hyderabad,87,0,Rashid Khan,False
+228,2015,Chandigarh,Eden Gardens,Delhi Capitals,Rajasthan Royals,Delhi Capitals,field,wickets,Rajasthan Royals,30,0,Trent Boult,False
+229,2022,Jaipur,M. Chinnaswamy Stadium,Royal Challengers Bangalore,Chennai Super Kings,Royal Challengers Bangalore,field,wickets,Chennai Super Kings,0,1,Ambati Rayudu,False
+230,2018,Hyderabad,Feroz Shah Kotla,Kolkata Knight Riders,Rajasthan Royals,Kolkata Knight Riders,bat,runs,Rajasthan Royals,0,4,Jos Buttler,False
+231,2020,Hyderabad,Wankhede Stadium,Delhi Capitals,Kolkata Knight Riders,Delhi Capitals,field,wickets,Kolkata Knight Riders,49,0,Venkatesh Iyer,False
+232,2022,Delhi,Eden Gardens,Kolkata Knight Riders,Royal Challengers Bangalore,Kolkata Knight Riders,field,wickets,Royal Challengers Bangalore,0,9,Dinesh Karthik,False
+233,2018,Kolkata,Wankhede Stadium,Royal Challengers Bangalore,Delhi Capitals,Delhi Capitals,bat,wickets,Delhi Capitals,0,5,Mitchell Marsh,True
+234,2017,Bangalore,Wankhede Stadium,Royal Challengers Bangalore,Mumbai Indians,Royal Challengers Bangalore,bat,wickets,Royal Challengers Bangalore,82,0,Faf du Plessis,True
+235,2023,Kolkata,M.A. Chidambaram Stadium,Kolkata Knight Riders,Delhi Capitals,Kolkata Knight Riders,field,wickets,Delhi Capitals,18,0,Mitchell Marsh,False
+236,2017,Jaipur,M.A. Chidambaram Stadium,Mumbai Indians,Chennai Super Kings,Chennai Super Kings,field,wickets,Chennai Super Kings,0,3,Ambati Rayudu,True
+237,2023,Delhi,Feroz Shah Kotla,Chennai Super Kings,Delhi Capitals,Chennai Super Kings,bat,wickets,Chennai Super Kings,68,0,Ambati Rayudu,True
+238,2016,Delhi,Rajiv Gandhi Stadium,Rajasthan Royals,Punjab Kings,Punjab Kings,field,tie,Punjab Kings,0,1,Shikhar Dhawan,True
+239,2016,Delhi,M. Chinnaswamy Stadium,Mumbai Indians,Chennai Super Kings,Chennai Super Kings,field,wickets,Mumbai Indians,33,0,Suryakumar Yadav,False
+240,2016,Delhi,Punjab Cricket Association Stadium,Mumbai Indians,Royal Challengers Bangalore,Royal Challengers Bangalore,field,runs,Mumbai Indians,36,0,Hardik Pandya,False
+241,2020,Jaipur,Wankhede Stadium,Sunrisers Hyderabad,Rajasthan Royals,Sunrisers Hyderabad,field,wickets,Sunrisers Hyderabad,82,0,David Warner,True
+242,2017,Kolkata,Rajiv Gandhi Stadium,Rajasthan Royals,Sunrisers Hyderabad,Rajasthan Royals,field,runs,Sunrisers Hyderabad,0,9,Bhuvneshwar Kumar,False
+243,2023,Chandigarh,Punjab Cricket Association Stadium,Rajasthan Royals,Delhi Capitals,Rajasthan Royals,field,runs,Delhi Capitals,28,0,Prithvi Shaw,False
+244,2018,Delhi,Punjab Cricket Association Stadium,Mumbai Indians,Rajasthan Royals,Rajasthan Royals,bat,wickets,Rajasthan Royals,0,2,Shimron Hetmyer,True
+245,2015,Chandigarh,M. Chinnaswamy Stadium,Delhi Capitals,Royal Challengers Bangalore,Delhi Capitals,bat,wickets,Delhi Capitals,84,0,Anrich Nortje,True
+246,2018,Mumbai,Feroz Shah Kotla,Sunrisers Hyderabad,Punjab Kings,Punjab Kings,field,wickets,Punjab Kings,0,9,Kagiso Rabada,True
+247,2015,Hyderabad,Punjab Cricket Association Stadium,Sunrisers Hyderabad,Kolkata Knight Riders,Sunrisers Hyderabad,field,runs,Kolkata Knight Riders,0,7,Pat Cummins,False
+248,2019,Bangalore,M. Chinnaswamy Stadium,Royal Challengers Bangalore,Sunrisers Hyderabad,Sunrisers Hyderabad,bat,wickets,Royal Challengers Bangalore,0,9,Glenn Maxwell,False
+249,2018,Chandigarh,Punjab Cricket Association Stadium,Punjab Kings,Royal Challengers Bangalore,Punjab Kings,field,runs,Royal Challengers Bangalore,41,0,Dinesh Karthik,False
+250,2022,Chennai,Wankhede Stadium,Rajasthan Royals,Royal Challengers Bangalore,Rajasthan Royals,field,tie,Royal Challengers Bangalore,39,0,Faf du Plessis,False
+251,2022,Chennai,Wankhede Stadium,Mumbai Indians,Chennai Super Kings,Mumbai Indians,field,tie,Chennai Super Kings,0,4,Ambati Rayudu,False
+252,2021,Jaipur,Sawai Mansingh Stadium,Royal Challengers Bangalore,Rajasthan Royals,Rajasthan Royals,field,wickets,Royal Challengers Bangalore,0,2,Dinesh Karthik,False
+253,2017,Jaipur,Rajiv Gandhi Stadium,Kolkata Knight Riders,Chennai Super Kings,Chennai Super Kings,field,wickets,Chennai Super Kings,29,0,Deepak Chahar,True
+254,2015,Hyderabad,Eden Gardens,Chennai Super Kings,Royal Challengers Bangalore,Chennai Super Kings,bat,wickets,Chennai Super Kings,0,9,Ravindra Jadeja,True
+255,2015,Mumbai,M. Chinnaswamy Stadium,Punjab Kings,Delhi Capitals,Punjab Kings,bat,wickets,Punjab Kings,0,6,Shikhar Dhawan,True
+256,2017,Chennai,M.A. Chidambaram Stadium,Punjab Kings,Rajasthan Royals,Rajasthan Royals,bat,runs,Rajasthan Royals,51,0,Jos Buttler,True
+257,2020,Kolkata,M. Chinnaswamy Stadium,Punjab Kings,Chennai Super Kings,Chennai Super Kings,bat,wickets,Punjab Kings,75,0,Jonny Bairstow,False
+258,2021,Kolkata,Eden Gardens,Sunrisers Hyderabad,Kolkata Knight Riders,Kolkata Knight Riders,field,wickets,Kolkata Knight Riders,77,0,Sunil Narine,True
+259,2020,Jaipur,Rajiv Gandhi Stadium,Kolkata Knight Riders,Chennai Super Kings,Kolkata Knight Riders,field,wickets,Chennai Super Kings,0,1,Deepak Chahar,False
+260,2020,Mumbai,M.A. Chidambaram Stadium,Punjab Kings,Delhi Capitals,Delhi Capitals,bat,runs,Punjab Kings,0,4,Shikhar Dhawan,False
+261,2020,Jaipur,Eden Gardens,Kolkata Knight Riders,Chennai Super Kings,Kolkata Knight Riders,field,wickets,Kolkata Knight Riders,82,0,Pat Cummins,True
+262,2017,Bangalore,Sawai Mansingh Stadium,Delhi Capitals,Kolkata Knight Riders,Kolkata Knight Riders,bat,runs,Delhi Capitals,51,0,Rishabh Pant,False
+263,2020,Kolkata,M.A. Chidambaram Stadium,Punjab Kings,Mumbai Indians,Punjab Kings,field,wickets,Punjab Kings,73,0,Jonny Bairstow,True
+264,2022,Chandigarh,Wankhede Stadium,Chennai Super Kings,Punjab Kings,Punjab Kings,field,wickets,Punjab Kings,39,0,Shikhar Dhawan,True
+265,2016,Jaipur,Eden Gardens,Kolkata Knight Riders,Sunrisers Hyderabad,Sunrisers Hyderabad,bat,wickets,Sunrisers Hyderabad,0,8,David Warner,True
+266,2019,Delhi,M. Chinnaswamy Stadium,Kolkata Knight Riders,Mumbai Indians,Mumbai Indians,field,wickets,Mumbai Indians,3,0,Rohit Sharma,True
+267,2015,Chandigarh,M.A. Chidambaram Stadium,Chennai Super Kings,Mumbai Indians,Mumbai Indians,bat,runs,Mumbai Indians,0,4,Hardik Pandya,True
+268,2015,Bangalore,Sawai Mansingh Stadium,Punjab Kings,Mumbai Indians,Mumbai Indians,field,runs,Mumbai Indians,0,2,Hardik Pandya,True
+269,2019,Bangalore,M. Chinnaswamy Stadium,Chennai Super Kings,Kolkata Knight Riders,Chennai Super Kings,field,wickets,Kolkata Knight Riders,27,0,Venkatesh Iyer,False
+270,2017,Jaipur,Punjab Cricket Association Stadium,Kolkata Knight Riders,Punjab Kings,Punjab Kings,bat,wickets,Punjab Kings,0,6,Shikhar Dhawan,True
+271,2018,Hyderabad,M.A. Chidambaram Stadium,Chennai Super Kings,Rajasthan Royals,Rajasthan Royals,field,runs,Rajasthan Royals,0,5,Shimron Hetmyer,True
+272,2017,Jaipur,M.A. Chidambaram Stadium,Kolkata Knight Riders,Punjab Kings,Punjab Kings,bat,wickets,Kolkata Knight Riders,38,0,Venkatesh Iyer,False
+273,2015,Hyderabad,Sawai Mansingh Stadium,Kolkata Knight Riders,Royal Challengers Bangalore,Kolkata Knight Riders,bat,wickets,Kolkata Knight Riders,0,6,Andre Russell,True
+274,2015,Bangalore,Punjab Cricket Association Stadium,Delhi Capitals,Rajasthan Royals,Rajasthan Royals,field,wickets,Rajasthan Royals,16,0,Sanju Samson,True
+275,2019,Mumbai,Eden Gardens,Mumbai Indians,Punjab Kings,Mumbai Indians,bat,wickets,Mumbai Indians,0,1,Hardik Pandya,True
+276,2020,Bangalore,Feroz Shah Kotla,Kolkata Knight Riders,Mumbai Indians,Mumbai Indians,field,runs,Kolkata Knight Riders,40,0,Venkatesh Iyer,False
+277,2017,Kolkata,Eden Gardens,Punjab Kings,Delhi Capitals,Delhi Capitals,field,runs,Delhi Capitals,0,5,Rishabh Pant,True
+278,2023,Chandigarh,Punjab Cricket Association Stadium,Royal Challengers Bangalore,Rajasthan Royals,Royal Challengers Bangalore,field,wickets,Royal Challengers Bangalore,0,3,Virat Kohli,True
+279,2019,Hyderabad,Rajiv Gandhi Stadium,Sunrisers Hyderabad,Kolkata Knight Riders,Kolkata Knight Riders,bat,wickets,Sunrisers Hyderabad,41,0,Nicholas Pooran,False
+280,2022,Chennai,M. Chinnaswamy Stadium,Rajasthan Royals,Kolkata Knight Riders,Rajasthan Royals,field,wickets,Rajasthan Royals,12,0,Shimron Hetmyer,True
+281,2015,Jaipur,Sawai Mansingh Stadium,Mumbai Indians,Royal Challengers Bangalore,Mumbai Indians,field,wickets,Royal Challengers Bangalore,0,6,Dinesh Karthik,False
+282,2019,Bangalore,Eden Gardens,Mumbai Indians,Rajasthan Royals,Rajasthan Royals,bat,wickets,Mumbai Indians,0,6,Ishan Kishan,False
+283,2017,Kolkata,M.A. Chidambaram Stadium,Mumbai Indians,Sunrisers Hyderabad,Mumbai Indians,field,tie,Sunrisers Hyderabad,55,0,Rashid Khan,False
+284,2015,Chennai,Sawai Mansingh Stadium,Delhi Capitals,Royal Challengers Bangalore,Royal Challengers Bangalore,field,wickets,Delhi Capitals,45,0,Mitchell Marsh,False
+285,2018,Chandigarh,Wankhede Stadium,Kolkata Knight Riders,Mumbai Indians,Mumbai Indians,field,wickets,Kolkata Knight Riders,79,0,Andre Russell,False
+286,2019,Jaipur,Punjab Cricket Association Stadium,Delhi Capitals,Chennai Super Kings,Delhi Capitals,field,runs,Delhi Capitals,90,0,Mitchell Marsh,True
+287,2021,Mumbai,M. Chinnaswamy Stadium,Kolkata Knight Riders,Delhi Capitals,Kolkata Knight Riders,field,runs,Kolkata Knight Riders,0,8,Shubman Gill,True
+288,2015,Mumbai,Eden Gardens,Punjab Kings,Royal Challengers Bangalore,Punjab Kings,field,wickets,Punjab Kings,0,2,Kagiso Rabada,True
+289,2017,Kolkata,Sawai Mansingh Stadium,Delhi Capitals,Royal Challengers Bangalore,Delhi Capitals,field,runs,Royal Challengers Bangalore,49,0,Dinesh Karthik,False
+290,2016,Bangalore,M. Chinnaswamy Stadium,Delhi Capitals,Mumbai Indians,Mumbai Indians,field,wickets,Mumbai Indians,0,1,Hardik Pandya,True
+291,2023,Chennai,Eden Gardens,Sunrisers Hyderabad,Rajasthan Royals,Rajasthan Royals,bat,wickets,Sunrisers Hyderabad,0,4,David Warner,False
+292,2020,Jaipur,Sawai Mansingh Stadium,Royal Challengers Bangalore,Delhi Capitals,Royal Challengers Bangalore,bat,wickets,Delhi Capitals,23,0,Rishabh Pant,False
+293,2017,Mumbai,M.A. Chidambaram Stadium,Delhi Capitals,Sunrisers Hyderabad,Sunrisers Hyderabad,field,runs,Sunrisers Hyderabad,24,0,Kane Williamson,True
+294,2022,Mumbai,Wankhede Stadium,Sunrisers Hyderabad,Royal Challengers Bangalore,Royal Challengers Bangalore,bat,runs,Royal Challengers Bangalore,38,0,Glenn Maxwell,True
+295,2022,Delhi,Wankhede Stadium,Chennai Super Kings,Mumbai Indians,Mumbai Indians,field,runs,Mumbai Indians,28,0,Ishan Kishan,True
+296,2016,Bangalore,Rajiv Gandhi Stadium,Royal Challengers Bangalore,Sunrisers Hyderabad,Sunrisers Hyderabad,bat,runs,Royal Challengers Bangalore,21,0,Glenn Maxwell,False
+297,2020,Delhi,Sawai Mansingh Stadium,Punjab Kings,Sunrisers Hyderabad,Punjab Kings,bat,runs,Punjab Kings,0,6,Kagiso Rabada,True
+298,2021,Chandigarh,Eden Gardens,Delhi Capitals,Kolkata Knight Riders,Delhi Capitals,field,wickets,Delhi Capitals,0,4,Prithvi Shaw,True
+299,2016,Mumbai,Wankhede Stadium,Rajasthan Royals,Sunrisers Hyderabad,Sunrisers Hyderabad,field,wickets,Rajasthan Royals,0,8,Jos Buttler,False
+300,2016,Kolkata,Punjab Cricket Association Stadium,Mumbai Indians,Kolkata Knight Riders,Mumbai Indians,bat,wickets,Kolkata Knight Riders,0,9,Sunil Narine,False
+301,2015,Hyderabad,Wankhede Stadium,Chennai Super Kings,Sunrisers Hyderabad,Chennai Super Kings,field,wickets,Sunrisers Hyderabad,45,0,Bhuvneshwar Kumar,False
+302,2022,Hyderabad,Feroz Shah Kotla,Chennai Super Kings,Sunrisers Hyderabad,Chennai Super Kings,field,runs,Chennai Super Kings,0,6,MS Dhoni,True
+303,2015,Jaipur,Feroz Shah Kotla,Punjab Kings,Delhi Capitals,Delhi Capitals,bat,wickets,Delhi Capitals,0,1,Rishabh Pant,True
+304,2023,Mumbai,Wankhede Stadium,Sunrisers Hyderabad,Royal Challengers Bangalore,Royal Challengers Bangalore,field,wickets,Sunrisers Hyderabad,0,4,Nicholas Pooran,False
+305,2020,Mumbai,Sawai Mansingh Stadium,Chennai Super Kings,Kolkata Knight Riders,Kolkata Knight Riders,bat,runs,Chennai Super Kings,0,7,Deepak Chahar,False
+306,2021,Chandigarh,Rajiv Gandhi Stadium,Royal Challengers Bangalore,Rajasthan Royals,Royal Challengers Bangalore,bat,wickets,Rajasthan Royals,0,1,Shimron Hetmyer,False
+307,2021,Mumbai,Wankhede Stadium,Delhi Capitals,Chennai Super Kings,Chennai Super Kings,field,runs,Delhi Capitals,0,8,Prithvi Shaw,False
+308,2017,Kolkata,M.A. Chidambaram Stadium,Delhi Capitals,Rajasthan Royals,Rajasthan Royals,bat,wickets,Delhi Capitals,0,6,Anrich Nortje,False
+309,2016,Delhi,M. Chinnaswamy Stadium,Rajasthan Royals,Kolkata Knight Riders,Rajasthan Royals,field,tie,Rajasthan Royals,0,5,Shimron Hetmyer,True
+310,2023,Mumbai,Eden Gardens,Punjab Kings,Mumbai Indians,Mumbai Indians,field,runs,Mumbai Indians,0,9,Rohit Sharma,True
+311,2022,Mumbai,Rajiv Gandhi Stadium,Mumbai Indians,Sunrisers Hyderabad,Sunrisers Hyderabad,bat,wickets,Sunrisers Hyderabad,44,0,Rashid Khan,True
+312,2021,Chandigarh,M.A. Chidambaram Stadium,Sunrisers Hyderabad,Chennai Super Kings,Sunrisers Hyderabad,field,wickets,Sunrisers Hyderabad,0,5,Rashid Khan,True
+313,2023,Bangalore,Rajiv Gandhi Stadium,Mumbai Indians,Chennai Super Kings,Mumbai Indians,field,tie,Chennai Super Kings,0,6,Deepak Chahar,False
+314,2018,Chennai,M.A. Chidambaram Stadium,Chennai Super Kings,Royal Challengers Bangalore,Chennai Super Kings,bat,wickets,Royal Challengers Bangalore,63,0,Not Awarded,False
+315,2018,Bangalore,Eden Gardens,Punjab Kings,Rajasthan Royals,Rajasthan Royals,field,wickets,Punjab Kings,0,5,KL Rahul,False
+316,2015,Chandigarh,Eden Gardens,Rajasthan Royals,Sunrisers Hyderabad,Sunrisers Hyderabad,field,runs,Sunrisers Hyderabad,75,0,Kane Williamson,True
+317,2022,Bangalore,Feroz Shah Kotla,Mumbai Indians,Kolkata Knight Riders,Kolkata Knight Riders,field,runs,Mumbai Indians,48,0,Jasprit Bumrah,False
+318,2017,Chandigarh,Sawai Mansingh Stadium,Royal Challengers Bangalore,Sunrisers Hyderabad,Royal Challengers Bangalore,field,runs,Royal Challengers Bangalore,0,7,Dinesh Karthik,True
+319,2021,Kolkata,M.A. Chidambaram Stadium,Delhi Capitals,Rajasthan Royals,Delhi Capitals,bat,tie,Delhi Capitals,57,0,Mitchell Marsh,True
+320,2016,Jaipur,M. Chinnaswamy Stadium,Chennai Super Kings,Mumbai Indians,Mumbai Indians,field,wickets,Mumbai Indians,0,4,Rohit Sharma,True
+321,2016,Mumbai,Feroz Shah Kotla,Rajasthan Royals,Punjab Kings,Punjab Kings,field,wickets,Rajasthan Royals,24,0,Shimron Hetmyer,False
+322,2021,Chandigarh,M.A. Chidambaram Stadium,Mumbai Indians,Punjab Kings,Mumbai Indians,field,wickets,Punjab Kings,0,5,Liam Livingstone,False
+323,2020,Chandigarh,Feroz Shah Kotla,Sunrisers Hyderabad,Punjab Kings,Sunrisers Hyderabad,field,runs,Punjab Kings,34,0,Shikhar Dhawan,False
+324,2017,Chennai,Eden Gardens,Royal Challengers Bangalore,Mumbai Indians,Royal Challengers Bangalore,field,runs,Royal Challengers Bangalore,0,7,Faf du Plessis,True
+325,2023,Chandigarh,Rajiv Gandhi Stadium,Royal Challengers Bangalore,Mumbai Indians,Royal Challengers Bangalore,field,runs,Mumbai Indians,28,0,Jasprit Bumrah,False
+326,2020,Hyderabad,Punjab Cricket Association Stadium,Mumbai Indians,Chennai Super Kings,Chennai Super Kings,field,runs,Chennai Super Kings,37,0,Ambati Rayudu,True
+327,2020,Jaipur,Feroz Shah Kotla,Delhi Capitals,Mumbai Indians,Delhi Capitals,field,runs,Delhi Capitals,0,9,Axar Patel,True
+328,2015,Mumbai,M.A. Chidambaram Stadium,Mumbai Indians,Punjab Kings,Punjab Kings,field,wickets,Punjab Kings,0,8,Jonny Bairstow,True
+329,2018,Mumbai,M.A. Chidambaram Stadium,Chennai Super Kings,Punjab Kings,Punjab Kings,field,runs,Punjab Kings,37,0,Kagiso Rabada,True
+330,2020,Chennai,Punjab Cricket Association Stadium,Mumbai Indians,Royal Challengers Bangalore,Royal Challengers Bangalore,field,runs,Mumbai Indians,56,0,Suryakumar Yadav,False
+331,2020,Kolkata,Sawai Mansingh Stadium,Royal Challengers Bangalore,Rajasthan Royals,Royal Challengers Bangalore,bat,runs,Royal Challengers Bangalore,0,9,Harshal Patel,True
+332,2019,Mumbai,M. Chinnaswamy Stadium,Rajasthan Royals,Delhi Capitals,Rajasthan Royals,bat,runs,Rajasthan Royals,65,0,Yuzvendra Chahal,True
+333,2015,Hyderabad,Eden Gardens,Mumbai Indians,Kolkata Knight Riders,Mumbai Indians,field,tie,Kolkata Knight Riders,47,0,Venkatesh Iyer,False
+334,2022,Mumbai,M.A. Chidambaram Stadium,Delhi Capitals,Punjab Kings,Delhi Capitals,field,wickets,Punjab Kings,20,0,Not Awarded,False
+335,2019,Hyderabad,Wankhede Stadium,Punjab Kings,Royal Challengers Bangalore,Royal Challengers Bangalore,field,tie,Royal Challengers Bangalore,0,4,Harshal Patel,True
+336,2019,Jaipur,Rajiv Gandhi Stadium,Rajasthan Royals,Sunrisers Hyderabad,Rajasthan Royals,field,runs,Sunrisers Hyderabad,29,0,Nicholas Pooran,False
+337,2021,Jaipur,Feroz Shah Kotla,Sunrisers Hyderabad,Rajasthan Royals,Sunrisers Hyderabad,field,runs,Sunrisers Hyderabad,0,3,Kane Williamson,True
+338,2018,Delhi,Sawai Mansingh Stadium,Kolkata Knight Riders,Royal Challengers Bangalore,Royal Challengers Bangalore,field,wickets,Royal Challengers Bangalore,60,0,Faf du Plessis,True
+339,2020,Delhi,M. Chinnaswamy Stadium,Mumbai Indians,Punjab Kings,Mumbai Indians,bat,runs,Punjab Kings,0,2,KL Rahul,False
+340,2018,Hyderabad,Punjab Cricket Association Stadium,Delhi Capitals,Royal Challengers Bangalore,Royal Challengers Bangalore,field,runs,Delhi Capitals,0,2,Rishabh Pant,False
+341,2017,Kolkata,Rajiv Gandhi Stadium,Rajasthan Royals,Chennai Super Kings,Chennai Super Kings,field,runs,Rajasthan Royals,35,0,Trent Boult,False
+342,2021,Mumbai,Eden Gardens,Delhi Capitals,Kolkata Knight Riders,Kolkata Knight Riders,field,runs,Delhi Capitals,0,4,Axar Patel,False
+343,2022,Chandigarh,Sawai Mansingh Stadium,Sunrisers Hyderabad,Punjab Kings,Punjab Kings,field,runs,Punjab Kings,95,0,Kagiso Rabada,True
+344,2018,Mumbai,M. Chinnaswamy Stadium,Royal Challengers Bangalore,Punjab Kings,Punjab Kings,bat,runs,Punjab Kings,91,0,KL Rahul,True
+345,2016,Delhi,Feroz Shah Kotla,Delhi Capitals,Sunrisers Hyderabad,Sunrisers Hyderabad,bat,wickets,Sunrisers Hyderabad,11,0,Kane Williamson,True
+346,2017,Bangalore,Feroz Shah Kotla,Rajasthan Royals,Mumbai Indians,Mumbai Indians,bat,runs,Mumbai Indians,0,5,Ishan Kishan,True
+347,2015,Chandigarh,Punjab Cricket Association Stadium,Delhi Capitals,Kolkata Knight Riders,Kolkata Knight Riders,field,runs,Delhi Capitals,38,0,Rishabh Pant,False
+348,2022,Hyderabad,Wankhede Stadium,Delhi Capitals,Rajasthan Royals,Delhi Capitals,bat,wickets,Delhi Capitals,0,4,Prithvi Shaw,True
+349,2017,Chandigarh,Punjab Cricket Association Stadium,Delhi Capitals,Punjab Kings,Delhi Capitals,field,runs,Delhi Capitals,0,2,Axar Patel,True
+350,2021,Bangalore,Eden Gardens,Chennai Super Kings,Kolkata Knight Riders,Chennai Super Kings,field,runs,Chennai Super Kings,8,0,Ravindra Jadeja,True
+351,2019,Mumbai,Sawai Mansingh Stadium,Chennai Super Kings,Delhi Capitals,Chennai Super Kings,bat,wickets,Delhi Capitals,0,9,Axar Patel,False
+352,2019,Mumbai,Sawai Mansingh Stadium,Royal Challengers Bangalore,Sunrisers Hyderabad,Sunrisers Hyderabad,field,runs,Royal Challengers Bangalore,0,1,Dinesh Karthik,False
+353,2021,Kolkata,M.A. Chidambaram Stadium,Mumbai Indians,Rajasthan Royals,Mumbai Indians,bat,runs,Rajasthan Royals,56,0,Trent Boult,False
+354,2023,Chennai,Wankhede Stadium,Delhi Capitals,Mumbai Indians,Mumbai Indians,field,wickets,Delhi Capitals,0,9,Mitchell Marsh,False
+355,2019,Chandigarh,Wankhede Stadium,Sunrisers Hyderabad,Mumbai Indians,Sunrisers Hyderabad,bat,runs,Sunrisers Hyderabad,0,9,Not Awarded,True
+356,2015,Delhi,Sawai Mansingh Stadium,Mumbai Indians,Sunrisers Hyderabad,Mumbai Indians,field,wickets,Sunrisers Hyderabad,31,0,Kane Williamson,False
+357,2015,Bangalore,Sawai Mansingh Stadium,Sunrisers Hyderabad,Delhi Capitals,Sunrisers Hyderabad,bat,wickets,Delhi Capitals,0,5,Prithvi Shaw,False
+358,2016,Bangalore,Rajiv Gandhi Stadium,Mumbai Indians,Kolkata Knight Riders,Kolkata Knight Riders,field,runs,Mumbai Indians,50,0,Ishan Kishan,False
+359,2020,Bangalore,M. Chinnaswamy Stadium,Royal Challengers Bangalore,Punjab Kings,Royal Challengers Bangalore,field,wickets,Punjab Kings,69,0,Jonny Bairstow,False
+360,2023,Delhi,Rajiv Gandhi Stadium,Delhi Capitals,Mumbai Indians,Mumbai Indians,field,wickets,Mumbai Indians,30,0,Hardik Pandya,True
+361,2022,Chennai,Rajiv Gandhi Stadium,Delhi Capitals,Rajasthan Royals,Rajasthan Royals,field,runs,Rajasthan Royals,88,0,Trent Boult,True
+362,2019,Mumbai,Wankhede Stadium,Kolkata Knight Riders,Delhi Capitals,Kolkata Knight Riders,field,wickets,Kolkata Knight Riders,0,1,Pat Cummins,True
+363,2015,Kolkata,M.A. Chidambaram Stadium,Sunrisers Hyderabad,Rajasthan Royals,Sunrisers Hyderabad,field,runs,Sunrisers Hyderabad,0,4,Bhuvneshwar Kumar,True
+364,2021,Kolkata,Feroz Shah Kotla,Mumbai Indians,Royal Challengers Bangalore,Mumbai Indians,field,wickets,Mumbai Indians,75,0,Ishan Kishan,True
+365,2019,Delhi,Rajiv Gandhi Stadium,Mumbai Indians,Royal Challengers Bangalore,Royal Challengers Bangalore,field,runs,Royal Challengers Bangalore,45,0,Glenn Maxwell,True
+366,2020,Kolkata,M.A. Chidambaram Stadium,Punjab Kings,Delhi Capitals,Punjab Kings,field,wickets,Punjab Kings,4,0,Liam Livingstone,True
+367,2021,Bangalore,Punjab Cricket Association Stadium,Punjab Kings,Royal Challengers Bangalore,Royal Challengers Bangalore,field,runs,Royal Challengers Bangalore,0,9,Glenn Maxwell,True
+368,2017,Kolkata,Eden Gardens,Chennai Super Kings,Royal Challengers Bangalore,Royal Challengers Bangalore,bat,wickets,Chennai Super Kings,0,9,MS Dhoni,False
+369,2017,Chennai,Rajiv Gandhi Stadium,Kolkata Knight Riders,Mumbai Indians,Kolkata Knight Riders,bat,runs,Kolkata Knight Riders,0,2,Venkatesh Iyer,True
+370,2019,Mumbai,Punjab Cricket Association Stadium,Rajasthan Royals,Sunrisers Hyderabad,Rajasthan Royals,field,runs,Sunrisers Hyderabad,64,0,Kane Williamson,False
+371,2020,Jaipur,Feroz Shah Kotla,Punjab Kings,Sunrisers Hyderabad,Sunrisers Hyderabad,field,wickets,Sunrisers Hyderabad,0,2,Bhuvneshwar Kumar,True
+372,2023,Kolkata,Eden Gardens,Rajasthan Royals,Delhi Capitals,Delhi Capitals,field,wickets,Delhi Capitals,51,0,Prithvi Shaw,True
+373,2019,Hyderabad,Eden Gardens,Chennai Super Kings,Punjab Kings,Punjab Kings,field,wickets,Punjab Kings,50,0,KL Rahul,True
+374,2015,Chandigarh,Feroz Shah Kotla,Chennai Super Kings,Punjab Kings,Chennai Super Kings,field,wickets,Punjab Kings,0,4,Liam Livingstone,False
+375,2018,Delhi,Rajiv Gandhi Stadium,Chennai Super Kings,Delhi Capitals,Delhi Capitals,bat,wickets,Chennai Super Kings,59,0,Not Awarded,False
+376,2019,Bangalore,Wankhede Stadium,Sunrisers Hyderabad,Delhi Capitals,Sunrisers Hyderabad,bat,wickets,Sunrisers Hyderabad,0,8,Rashid Khan,True
+377,2019,Kolkata,Feroz Shah Kotla,Sunrisers Hyderabad,Kolkata Knight Riders,Kolkata Knight Riders,bat,runs,Kolkata Knight Riders,30,0,Andre Russell,True
+378,2021,Hyderabad,Feroz Shah Kotla,Royal Challengers Bangalore,Punjab Kings,Punjab Kings,field,wickets,Punjab Kings,42,0,Kagiso Rabada,True
+379,2018,Kolkata,Feroz Shah Kotla,Royal Challengers Bangalore,Sunrisers Hyderabad,Royal Challengers Bangalore,field,wickets,Sunrisers Hyderabad,37,0,Bhuvneshwar Kumar,False
+380,2015,Jaipur,Eden Gardens,Chennai Super Kings,Sunrisers Hyderabad,Sunrisers Hyderabad,bat,tie,Chennai Super Kings,42,0,MS Dhoni,False
+381,2019,Mumbai,M. Chinnaswamy Stadium,Kolkata Knight Riders,Sunrisers Hyderabad,Kolkata Knight Riders,field,wickets,Sunrisers Hyderabad,0,2,David Warner,False
+382,2021,Mumbai,M.A. Chidambaram Stadium,Mumbai Indians,Punjab Kings,Mumbai Indians,field,runs,Mumbai Indians,0,5,Suryakumar Yadav,True
+383,2020,Mumbai,Punjab Cricket Association Stadium,Sunrisers Hyderabad,Kolkata Knight Riders,Kolkata Knight Riders,field,runs,Sunrisers Hyderabad,6,0,Nicholas Pooran,False
+384,2019,Bangalore,Wankhede Stadium,Kolkata Knight Riders,Delhi Capitals,Kolkata Knight Riders,field,wickets,Kolkata Knight Riders,0,6,Shubman Gill,True
+385,2018,Kolkata,Rajiv Gandhi Stadium,Delhi Capitals,Sunrisers Hyderabad,Delhi Capitals,bat,wickets,Delhi Capitals,0,6,Rishabh Pant,True
+386,2016,Hyderabad,Rajiv Gandhi Stadium,Sunrisers Hyderabad,Chennai Super Kings,Chennai Super Kings,field,wickets,Chennai Super Kings,0,6,Deepak Chahar,True
+387,2018,Mumbai,Punjab Cricket Association Stadium,Sunrisers Hyderabad,Royal Challengers Bangalore,Sunrisers Hyderabad,field,wickets,Sunrisers Hyderabad,29,0,Rashid Khan,True
+388,2017,Hyderabad,M.A. Chidambaram Stadium,Royal Challengers Bangalore,Punjab Kings,Royal Challengers Bangalore,bat,wickets,Punjab Kings,0,3,Jonny Bairstow,False
+389,2015,Kolkata,Feroz Shah Kotla,Mumbai Indians,Kolkata Knight Riders,Mumbai Indians,field,runs,Kolkata Knight Riders,59,0,Shubman Gill,False
+390,2022,Bangalore,M. Chinnaswamy Stadium,Mumbai Indians,Kolkata Knight Riders,Kolkata Knight Riders,bat,wickets,Mumbai Indians,47,0,Hardik Pandya,False
+391,2019,Jaipur,Wankhede Stadium,Punjab Kings,Kolkata Knight Riders,Punjab Kings,field,runs,Punjab Kings,0,1,KL Rahul,True
+392,2018,Bangalore,Rajiv Gandhi Stadium,Rajasthan Royals,Kolkata Knight Riders,Kolkata Knight Riders,field,runs,Rajasthan Royals,0,1,Sanju Samson,False
+393,2022,Hyderabad,Punjab Cricket Association Stadium,Rajasthan Royals,Chennai Super Kings,Chennai Super Kings,field,wickets,Chennai Super Kings,0,2,Deepak Chahar,True
+394,2021,Bangalore,Sawai Mansingh Stadium,Rajasthan Royals,Royal Challengers Bangalore,Rajasthan Royals,field,wickets,Royal Challengers Bangalore,68,0,Harshal Patel,False
+395,2016,Bangalore,M. Chinnaswamy Stadium,Rajasthan Royals,Royal Challengers Bangalore,Rajasthan Royals,bat,runs,Rajasthan Royals,0,9,Sanju Samson,True
+396,2015,Jaipur,Punjab Cricket Association Stadium,Delhi Capitals,Sunrisers Hyderabad,Delhi Capitals,field,runs,Sunrisers Hyderabad,0,4,Kane Williamson,False
+397,2018,Kolkata,M. Chinnaswamy Stadium,Delhi Capitals,Kolkata Knight Riders,Kolkata Knight Riders,bat,tie,Delhi Capitals,0,3,Rishabh Pant,False
+398,2022,Kolkata,Rajiv Gandhi Stadium,Sunrisers Hyderabad,Royal Challengers Bangalore,Sunrisers Hyderabad,bat,runs,Sunrisers Hyderabad,13,0,Rashid Khan,True
+399,2016,Delhi,Feroz Shah Kotla,Chennai Super Kings,Rajasthan Royals,Chennai Super Kings,field,wickets,Chennai Super Kings,0,9,MS Dhoni,True
+400,2017,Bangalore,Sawai Mansingh Stadium,Royal Challengers Bangalore,Chennai Super Kings,Royal Challengers Bangalore,bat,wickets,Chennai Super Kings,86,0,MS Dhoni,False
