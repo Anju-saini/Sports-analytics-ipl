@@ -1,1 +1,155 @@
+"""
+==============================================================
+ IPL SPORTS ANALYTICS PROJECT
+ File: src/01_data_cleaning.py
+ Author: [Your Name]
+ Description: Load raw data, inspect, clean, and save
+              clean versions ready for EDA and modelling.
+==============================================================
+"""
+
+import pandas as pd
+import numpy as np
+import os
+
+# ── Paths ─────────────────────────────────────────────────────────────────────
+DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
+MATCHES_RAW  = os.path.join(DATA_DIR, "matches.csv")
+DELIVERY_RAW = os.path.join(DATA_DIR, "deliveries.csv")
+MATCHES_CLEAN  = os.path.join(DATA_DIR, "matches_clean.csv")
+DELIVERY_CLEAN = os.path.join(DATA_DIR, "deliveries_clean.csv")
+
+
+def load_data():
+    """Load raw CSVs and return DataFrames."""
+    matches    = pd.read_csv(MATCHES_RAW)
+    deliveries = pd.read_csv(DELIVERY_RAW)
+    print(f"Loaded matches.csv    → {matches.shape}")
+    print(f"Loaded deliveries.csv → {deliveries.shape}")
+    return matches, deliveries
+
+
+def inspect(df: pd.DataFrame, name: str):
+    """Print a quick diagnostic summary."""
+    print(f"\n{'='*55}")
+    print(f" {name} — INSPECTION")
+    print(f"{'='*55}")
+    print(df.head(3).to_string())
+    print(f"\nShape : {df.shape}")
+    print(f"\nDtypes:\n{df.dtypes}")
+    print(f"\nMissing values:\n{df.isnull().sum()[df.isnull().sum() > 0]}")
+    print(f"\nDuplicates : {df.duplicated().sum()}")
+
+
+def clean_matches(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Cleaning steps:
+      1. Drop fully duplicate rows.
+      2. Fill missing 'city' from venue name.
+      3. Fill remaining missing 'city' with 'Unknown'.
+      4. Fill missing 'player_of_match' with 'Not Awarded'.
+      5. Cast 'season' to int.
+      6. Normalise 'toss_decision' to lowercase.
+      7. Add helper column: toss_win_match_win (bool).
+    """
+    print("\n[matches] Cleaning …")
+
+    # 1. Duplicates
+    before = len(df)
+    df = df.drop_duplicates()
+    print(f"  Removed {before - len(df)} duplicate rows.")
+
+    # 2. City from venue mapping
+    venue_city_map = {
+        "Wankhede Stadium"                    : "Mumbai",
+        "M.A. Chidambaram Stadium"            : "Chennai",
+        "Eden Gardens"                        : "Kolkata",
+        "Feroz Shah Kotla"                    : "Delhi",
+        "Rajiv Gandhi Stadium"                : "Hyderabad",
+        "Sawai Mansingh Stadium"              : "Jaipur",
+        "Punjab Cricket Association Stadium"  : "Chandigarh",
+        "M. Chinnaswamy Stadium"              : "Bangalore",
+    }
+    mask = df["city"].isnull()
+    df.loc[mask, "city"] = df.loc[mask, "venue"].map(venue_city_map)
+    print(f"  Filled {mask.sum()} 'city' values from venue map.")
+
+    # 3. Remaining nulls
+    remaining = df["city"].isnull().sum()
+    df["city"] = df["city"].fillna("Unknown")
+    print(f"  Filled {remaining} remaining 'city' nulls with 'Unknown'.")
+
+    # 4. Player of match
+    n = df["player_of_match"].isnull().sum()
+    df["player_of_match"] = df["player_of_match"].fillna("Not Awarded")
+    print(f"  Filled {n} 'player_of_match' nulls.")
+
+    # 5. Season dtype
+    df["season"] = df["season"].astype(int)
+
+    # 6. Normalise toss_decision
+    df["toss_decision"] = df["toss_decision"].str.lower().str.strip()
+
+    # 7. New feature
+    df["toss_win_match_win"] = df["toss_winner"] == df["winner"]
+
+    print("  ✅ Matches cleaning done.")
+    return df
+
+
+def clean_deliveries(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Cleaning steps:
+      1. Drop duplicates.
+      2. Clip extreme run values (> 7 per legal delivery).
+      3. Ensure binary columns are 0/1 int.
+      4. Add phase column: Powerplay / Middle / Death.
+    """
+    print("\n[deliveries] Cleaning …")
+
+    # 1. Duplicates
+    before = len(df)
+    df = df.drop_duplicates()
+    print(f"  Removed {before - len(df)} duplicate rows.")
+
+    # 2. Clip batsman_runs
+    outliers = (df["batsman_runs"] > 7).sum()
+    df["batsman_runs"] = df["batsman_runs"].clip(upper=6)
+    print(f"  Clipped {outliers} outlier batsman_run values.")
+
+    # 3. Binary columns
+    for col in ["is_wicket", "wide_runs", "noball_runs"]:
+        df[col] = df[col].fillna(0).astype(int)
+
+    # 4. Phase
+    conditions = [
+        df["over"].between(1, 6),
+        df["over"].between(7, 15),
+        df["over"].between(16, 20),
+    ]
+    choices = ["Powerplay", "Middle", "Death"]
+    df["phase"] = np.select(conditions, choices, default="Unknown")
+
+    print("  ✅ Deliveries cleaning done.")
+    return df
+
+
+def main():
+    matches, deliveries = load_data()
+
+    inspect(matches,    "MATCHES")
+    inspect(deliveries, "DELIVERIES")
+
+    matches_clean    = clean_matches(matches)
+    deliveries_clean = clean_deliveries(deliveries)
+
+    matches_clean.to_csv(MATCHES_CLEAN,   index=False)
+    deliveries_clean.to_csv(DELIVERY_CLEAN, index=False)
+
+    print(f"\n✅ Saved → {MATCHES_CLEAN}")
+    print(f"✅ Saved → {DELIVERY_CLEAN}")
+
+
+if __name__ == "__main__":
+    main()
 
