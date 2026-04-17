@@ -1,13 +1,4 @@
 
-"""
-==============================================================
- IPL SPORTS ANALYTICS PROJECT
- Author: Anju
- Description: Exploratory Data Analysis — summary statistics,
-              distributions, team & player insights.
-==============================================================
-"""
-
 import pandas as pd
 import numpy as np
 import os
