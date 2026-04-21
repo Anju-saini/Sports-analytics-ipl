@@ -1,12 +1,3 @@
-"""
-==============================================================
- IPL SPORTS ANALYTICS PROJECT
- File: src/03_visualizations.py
- Author: Anju saini
- Description: Generate & save all analysis charts.
-              Run this script to reproduce every figure.
-==============================================================
-"""
 
 import pandas as pd
 import numpy as np
