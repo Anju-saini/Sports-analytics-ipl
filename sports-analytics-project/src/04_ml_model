@@ -1,1 +1,311 @@
 
+"""
+==============================================================
+ IPL SPORTS ANALYTICS PROJECT
+ File: src/04_ml_model.py
+ Author: Anju saini
+ Description: Predict match winner using Logistic Regression
+              and Random Forest. Includes feature engineering,
+              model evaluation, and feature importance plot.
+==============================================================
+"""
+
+import pandas as pd
+import numpy as np
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+import warnings
+warnings.filterwarnings("ignore")
+
+from sklearn.model_selection import train_test_split, cross_val_score, StratifiedKFold
+from sklearn.preprocessing   import LabelEncoder, StandardScaler
+from sklearn.linear_model    import LogisticRegression
+from sklearn.ensemble        import RandomForestClassifier
+from sklearn.metrics         import (
+    classification_report, confusion_matrix,
+    roc_auc_score, roc_curve, accuracy_score
+)
+
+DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
+FIG_DIR  = os.path.join(os.path.dirname(__file__), "..", "visualizations")
+os.makedirs(FIG_DIR, exist_ok=True)
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# 1. FEATURE ENGINEERING
+# ══════════════════════════════════════════════════════════════════════════════
+
+def build_team_stats(matches: pd.DataFrame) -> pd.DataFrame:
+    """
+    Compute rolling win-rate for each team up to (but not including)
+    the current match, to avoid data leakage.
+    """
+    matches = matches.sort_values(["season", "match_id"]).reset_index(drop=True)
+    win_counts   = {}
+    match_counts = {}
+
+    team1_wr, team2_wr = [], []
+
+    for _, row in matches.iterrows():
+        t1, t2 = row["team1"], row["team2"]
+
+        wr1 = win_counts.get(t1, 0) / max(match_counts.get(t1, 1), 1)
+        wr2 = win_counts.get(t2, 0) / max(match_counts.get(t2, 1), 1)
+        team1_wr.append(wr1)
+        team2_wr.append(wr2)
+
+        # Update after the match
+        for t in [t1, t2]:
+            match_counts[t] = match_counts.get(t, 0) + 1
+        winner = row.get("winner", None)
+        if pd.notna(winner):
+            win_counts[winner] = win_counts.get(winner, 0) + 1
+
+    matches["team1_win_rate"] = team1_wr
+    matches["team2_win_rate"] = team2_wr
+    matches["win_rate_diff"]  = matches["team1_win_rate"] - matches["team2_win_rate"]
+    return matches
+
+
+def engineer_features(matches: pd.DataFrame) -> pd.DataFrame:
+    """Create all model features from the matches dataset."""
+    df = matches.copy()
+
+    # Target: did team1 win?
+    df["target"] = (df["winner"] == df["team1"]).astype(int)
+
+    # Encode toss: 1 if team1 won toss, else 0
+    df["team1_won_toss"] = (df["toss_winner"] == df["team1"]).astype(int)
+
+    # Toss decision encoding
+    df["decision_bat"] = (df["toss_decision"] == "bat").astype(int)
+
+    # Label encode teams
+    le = LabelEncoder()
+    all_teams = pd.concat([df["team1"], df["team2"]]).unique()
+    le.fit(all_teams)
+    df["team1_enc"] = le.transform(df["team1"])
+    df["team2_enc"] = le.transform(df["team2"])
+
+    # Label encode venue
+    le_v = LabelEncoder()
+    df["venue_enc"] = le_v.fit_transform(df["venue"])
+
+    feature_cols = [
+        "team1_enc", "team2_enc", "venue_enc",
+        "team1_won_toss", "decision_bat",
+        "team1_win_rate", "team2_win_rate", "win_rate_diff",
+    ]
+    return df, feature_cols
+
+
+def prepare_data(matches: pd.DataFrame):
+    matches = build_team_stats(matches)
+    df, feature_cols = engineer_features(matches)
+
+    X = df[feature_cols]
+    y = df["target"]
+
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=0.2, random_state=42, stratify=y
+    )
+
+    scaler = StandardScaler()
+    X_train_sc = scaler.fit_transform(X_train)
+    X_test_sc  = scaler.transform(X_test)
+
+    return X_train, X_test, y_train, y_test, X_train_sc, X_test_sc, feature_cols
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# 2. TRAIN & EVALUATE MODELS
+# ══════════════════════════════════════════════════════════════════════════════
+
+def train_logistic(X_train_sc, y_train):
+    lr = LogisticRegression(max_iter=1000, random_state=42)
+    lr.fit(X_train_sc, y_train)
+    return lr
+
+def train_random_forest(X_train, y_train):
+    rf = RandomForestClassifier(
+        n_estimators=200, max_depth=8,
+        random_state=42, n_jobs=-1
+    )
+    rf.fit(X_train, y_train)
+    return rf
+
+def evaluate(model, X_test, y_test, model_name: str, is_scaled=False):
+    y_pred = model.predict(X_test)
+    y_prob = model.predict_proba(X_test)[:, 1]
+
+    acc     = accuracy_score(y_test, y_pred)
+    roc_auc = roc_auc_score(y_test, y_prob)
+
+    print(f"\n{'─'*50}")
+    print(f" {model_name}")
+    print(f"{'─'*50}")
+    print(f"  Accuracy   : {acc:.4f}")
+    print(f"  ROC-AUC    : {roc_auc:.4f}")
+    print(f"\n  Classification Report:\n")
+    print(classification_report(y_test, y_pred, target_names=["Team2 Wins", "Team1 Wins"]))
+
+    return y_pred, y_prob, acc, roc_auc
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# 3. PLOTS
+# ══════════════════════════════════════════════════════════════════════════════
+
+def plot_confusion(y_test, y_pred_lr, y_pred_rf):
+    fig, axes = plt.subplots(1, 2, figsize=(12, 5))
+    for ax, (y_pred, title) in zip(axes, [
+        (y_pred_lr, "Logistic Regression"),
+        (y_pred_rf, "Random Forest"),
+    ]):
+        cm = confusion_matrix(y_test, y_pred)
+        sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", ax=ax,
+                    xticklabels=["Team2 Wins", "Team1 Wins"],
+                    yticklabels=["Team2 Wins", "Team1 Wins"],
+                    linewidths=0.5)
+        ax.set_title(f"Confusion Matrix — {title}", fontsize=13, fontweight="bold")
+        ax.set_ylabel("Actual", fontsize=11)
+        ax.set_xlabel("Predicted", fontsize=11)
+    fig.tight_layout()
+    path = os.path.join(FIG_DIR, "10_confusion_matrices.png")
+    fig.savefig(path, dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    print(f"  💾 Saved → {path}")
+
+
+def plot_roc(y_test, y_prob_lr, y_prob_rf):
+    fig, ax = plt.subplots(figsize=(8, 6))
+    for y_prob, label, color in [
+        (y_prob_lr, "Logistic Regression", "#1f77b4"),
+        (y_prob_rf, "Random Forest",       "#2ca02c"),
+    ]:
+        fpr, tpr, _ = roc_curve(y_test, y_prob)
+        auc = roc_auc_score(y_test, y_prob)
+        ax.plot(fpr, tpr, label=f"{label}  (AUC = {auc:.3f})", linewidth=2, color=color)
+
+    ax.plot([0,1],[0,1], "k--", linewidth=1, label="Random (AUC = 0.500)")
+    ax.fill_between(fpr, tpr, alpha=0.05, color="#2ca02c")
+    ax.set_title("🎯 ROC Curve Comparison", fontsize=14, fontweight="bold", pad=12)
+    ax.set_xlabel("False Positive Rate", fontsize=12)
+    ax.set_ylabel("True Positive Rate", fontsize=12)
+    ax.legend(fontsize=11)
+    ax.spines[["top","right"]].set_visible(False)
+    fig.tight_layout()
+    path = os.path.join(FIG_DIR, "11_roc_curves.png")
+    fig.savefig(path, dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    print(f"  💾 Saved → {path}")
+
+
+def plot_feature_importance(rf, feature_cols):
+    importances = pd.Series(rf.feature_importances_, index=feature_cols).sort_values()
+
+    fig, ax = plt.subplots(figsize=(9, 5))
+    palette = sns.color_palette("viridis", len(importances))
+    ax.barh(importances.index, importances.values, color=palette, edgecolor="white")
+    for i, (val, label) in enumerate(zip(importances.values, importances.index)):
+        ax.text(val + 0.002, i, f"{val:.3f}", va="center", fontsize=9.5)
+
+    ax.set_title("🌲 Random Forest — Feature Importance", fontsize=14, fontweight="bold", pad=12)
+    ax.set_xlabel("Importance Score", fontsize=11)
+    ax.set_xlim(0, importances.max() + 0.06)
+    ax.spines[["top","right"]].set_visible(False)
+    fig.tight_layout()
+    path = os.path.join(FIG_DIR, "12_feature_importance.png")
+    fig.savefig(path, dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    print(f"  💾 Saved → {path}")
+
+
+def plot_model_comparison(results: dict):
+    labels  = list(results.keys())
+    metrics = list(results[labels[0]].keys())
+
+    x = np.arange(len(labels))
+    width = 0.35
+    fig, ax = plt.subplots(figsize=(8, 5))
+    colors = ["#1f77b4", "#2ca02c"]
+    for i, (metric, color) in enumerate(zip(metrics, colors)):
+        vals = [results[m][metric] for m in labels]
+        bars = ax.bar(x + i*width - width/2, vals, width, label=metric.upper(),
+                      color=color, edgecolor="white", alpha=0.88)
+        for bar, v in zip(bars, vals):
+            ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.005,
+                    f"{v:.3f}", ha="center", fontsize=9.5, fontweight="bold")
+
+    ax.set_title("📊 Model Performance Comparison", fontsize=14, fontweight="bold", pad=12)
+    ax.set_xticks(x)
+    ax.set_xticklabels(labels, fontsize=11)
+    ax.set_ylim(0, 1.05)
+    ax.set_ylabel("Score", fontsize=11)
+    ax.legend(fontsize=10)
+    ax.spines[["top","right"]].set_visible(False)
+    fig.tight_layout()
+    path = os.path.join(FIG_DIR, "13_model_comparison.png")
+    fig.savefig(path, dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    print(f"  💾 Saved → {path}")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# 4. CROSS-VALIDATION
+# ══════════════════════════════════════════════════════════════════════════════
+
+def cross_validate_models(lr, rf, X_train_sc, X_train, y_train):
+    cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+
+    lr_cv = cross_val_score(lr, X_train_sc, y_train, cv=cv, scoring="roc_auc")
+    rf_cv = cross_val_score(rf, X_train,    y_train, cv=cv, scoring="roc_auc")
+
+    print("\n📋 5-Fold Cross-Validation ROC-AUC Scores:")
+    print(f"  Logistic Regression : {lr_cv.mean():.4f} ± {lr_cv.std():.4f}")
+    print(f"  Random Forest       : {rf_cv.mean():.4f} ± {rf_cv.std():.4f}")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# MAIN
+# ══════════════════════════════════════════════════════════════════════════════
+
+def main():
+    print("Loading data …")
+    matches = pd.read_csv(os.path.join(DATA_DIR, "matches_clean.csv"))
+
+    print("Engineering features …")
+    (X_train, X_test,
+     y_train, y_test,
+     X_train_sc, X_test_sc,
+     feature_cols) = prepare_data(matches)
+
+    print(f"  Train size : {len(X_train)}")
+    print(f"  Test  size : {len(X_test)}")
+
+    print("\nTraining models …")
+    lr = train_logistic(X_train_sc, y_train)
+    rf = train_random_forest(X_train, y_train)
+
+    y_pred_lr, y_prob_lr, acc_lr, auc_lr = evaluate(lr, X_test_sc, y_test, "Logistic Regression")
+    y_pred_rf, y_prob_rf, acc_rf, auc_rf = evaluate(rf, X_test,    y_test, "Random Forest")
+
+    cross_validate_models(lr, rf, X_train_sc, X_train, y_train)
+
+    print("\nGenerating ML plots …")
+    plot_confusion(y_test, y_pred_lr, y_pred_rf)
+    plot_roc(y_test, y_prob_lr, y_prob_rf)
+    plot_feature_importance(rf, feature_cols)
+    plot_model_comparison({
+        "Logistic Regression" : {"accuracy": acc_lr, "roc_auc": auc_lr},
+        "Random Forest"       : {"accuracy": acc_rf, "roc_auc": auc_rf},
+    })
+
+    print("\n✅ ML modelling complete.")
+
+
+if __name__ == "__main__":
+    main()
