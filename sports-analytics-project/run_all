@@ -10,6 +10,14 @@ SCRIPTS = [
     "src/04_ml_model.py",
 ]
 
+SCRIPTS = [
+    "data/generate_data.py",
+    "src/01_data_cleaning.py",
+    "src/02_eda.py",
+    "src/03_visualizations.py",
+    "src/04_ml_model.py",
+]
+
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
 def run(script):
