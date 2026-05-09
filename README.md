@@ -13,7 +13,10 @@ We answer key sports analytics questions such as:
 - Does winning the toss actually help you win the match?
 - Who are the top batsmen and bowlers?
 - Can we predict the match winner using machine learning?
-
+ Which teams dominate the IPL?
+- Does winning the toss actually help you win the match?
+- Who are the top batsmen and bowlers?
+- Can we predict the match winner using machine learning?
 ---
 
 ##  Project Structure
