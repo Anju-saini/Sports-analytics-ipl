@@ -1,9 +1,5 @@
 # Sports-analytics-ipl
 # PL Sports Analytics Project
-# Sports-analytics-ipl
-# PL Sports Analytics Project# Sports-analytics-ipl
-# PL Sports Analytics Project# Sports-analytics-ipl
-# PL Sports Analytics Project
 
 ---
 
