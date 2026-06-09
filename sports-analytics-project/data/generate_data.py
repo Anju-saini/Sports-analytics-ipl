@@ -1,19 +1,4 @@
-"""
-Script to generate the IPL (Indian Premier League) dataset used in this project.
-Run this once to create the CSV files in the /data directory.
-"""
 
-import pandas as pd
-import numpy as np
-import os
-
-np.random.seed(42)
-
-teams = [
-    "Mumbai Indians", "Chennai Super Kings", "Royal Challengers Bangalore",
-    "Kolkata Knight Riders", "Delhi Capitals", "Sunrisers Hyderabad",
-    "Rajasthan Royals", "Punjab Kings"
-]
 
 venues = [
     "Wankhede Stadium", "M.A. Chidambaram Stadium", "Eden Gardens",
