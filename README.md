@@ -248,12 +248,7 @@ visualizations/
 
 ## 👤 Author
 
-**[Your Name]**  
+Anju saini 
 Data Analyst | Python • Pandas • Scikit-learn  
-[LinkedIn](https://linkedin.com/in/yourprofile) | [GitHub](https://github.com/yourusername)
 
----
 
-## 📄 License
-
-This project is open source under the [MIT License](LICENSE).
