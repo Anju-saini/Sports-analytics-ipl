@@ -1,10 +1,4 @@
 
-# Sports-analytics-ipl
-# PL Sports Analytics Project
-
----
-
-##  Project Overview
 
 This project analyses IPL (Indian Premier League) match and ball-by-ball delivery data across 9 seasons (2015–2023).  
 We answer key sports analytics questions such as:
