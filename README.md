@@ -235,7 +235,20 @@ visualizations/
 ```
 
 ---
+## 🚀 Future Improvements
 
+- [ ] Use real IPL dataset from Kaggle
+- [ ] Add player-level performance prediction
+- [ ] Build an interactive Streamlit dashboard
+- [ ] Try XGBoost / LightGBM for better accuracy
+- [ ] Add NLP analysis on match commentary
+
+---
+
+## 👤 Author
+
+Anju saini 
+Data Analyst | Python • Pandas • Scikit-learn 
  
 
 
